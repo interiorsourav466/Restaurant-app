@@ -1,0 +1,243 @@
+# Flavoro 🍴
+
+A modern full-stack MERN Restaurant Management Web Application built with React.js, Node.js, Express.js, and MongoDB.
+
+Flavoro allows users to explore delicious food menus, place orders, book restaurant tables, and manage their accounts, while admins can fully control categories, menus, orders, and bookings through a dedicated admin dashboard.
+
+---
+
+# 🚀 Features
+
+## 👨‍🍳 User Features
+
+* User Registration & Login
+* JWT Authentication
+* Browse Food Menus
+* Search Food Items
+* Add to Cart
+* Place Orders
+* Book Restaurant Tables
+* View My Orders
+* View My Bookings
+* Responsive UI Design
+
+---
+
+## 🔑 Admin Features
+
+* Secure Admin Login
+* Add/Delete Categories
+* Add/Delete Menu Items
+* Upload Food Images using Cloudinary
+* Manage Orders
+* Update Order Status
+* Manage Table Bookings
+* Update Booking Status
+* Full Restaurant Control Panel
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React.js
+* React Router DOM
+* Tailwind CSS
+* Axios
+* React Hot Toast
+* Lucide React Icons
+
+## Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+* bcryptjs
+* Multer
+* Cloudinary
+
+---
+
+# 📂 Project Structure
+
+```bash id="dd8lmb"
+Flavoro/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── config/
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+```env id="s55yn6"
+PORT=5000
+
+MONGO_URL=your_mongodb_url
+
+JWT_SECRET=your_secret_key
+
+ADMIN_EMAIL=your_admin_email
+ADMIN_PASSWORD=your_admin_password
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+---
+
+# 📦 Installation & Setup
+
+## Clone Repository
+
+```bash id="bgqb9x"
+git clone https://github.com/your-username/flavoro.git
+```
+
+---
+
+## Frontend Setup
+
+```bash id="jpnjfv"
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## Backend Setup
+
+```bash id="cz3c05"
+cd backend
+npm install
+npm run server
+```
+
+---
+
+# 🌐 API Routes
+
+## Authentication
+
+* `/api/auth/register`
+* `/api/auth/login`
+* `/api/auth/admin/login`
+
+## Category
+
+* `/api/category/add`
+* `/api/category/all`
+
+## Menu
+
+* `/api/menu/add`
+* `/api/menu/all`
+
+## Cart
+
+* `/api/cart/add`
+* `/api/cart/get`
+
+## Orders
+
+* `/api/order/place`
+* `/api/order/my-orders`
+
+## Booking
+
+* `/api/booking/create`
+* `/api/booking/my-bookings`
+
+---
+
+# 🔒 Authentication & Security
+
+* JWT Authentication
+* Protected Routes
+* Admin Authorization
+* HTTP Only Cookies
+* Password Hashing with bcryptjs
+
+---
+
+# ☁️ Cloudinary Integration
+
+Flavoro uses Cloudinary for:
+
+* Food Image Upload
+* Cloud Storage
+* Optimized Image Delivery
+
+---
+
+# 📱 Responsive Design
+
+Fully responsive for:
+
+* Mobile Devices
+* Tablets
+* Desktop Screens
+
+---
+
+# 🚀 Future Improvements
+
+* Online Payment Gateway
+* Email Notifications
+* Wishlist Feature
+* Food Reviews & Ratings
+* Dark Mode
+* Order Tracking
+* Dashboard Analytics
+* Coupon System
+* Multi Restaurant Support
+
+---
+
+# 👨‍💻 Developer
+
+## Sourav Halder
+
+MERN Stack Developer
+
+### Skills
+
+* React.js
+* Node.js
+* Express.js
+* MongoDB
+* JavaScript
+
+GitHub: 
+
+---
+
+# ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub.
+
+---
+
+# 🍽️ Flavoro
+
+> “Experience the taste of perfection — where every bite tells a story.”
