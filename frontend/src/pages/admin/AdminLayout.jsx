@@ -156,22 +156,19 @@ const AdminLayout = () => {
       {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden lg:ml-0">
         {/* Top bar */}
-        <header className="bg-white shadow-sm border-b border-gray-200 lg:pl-0 pl-16">
-          <div className="flex items-center justify-between px-6 py-4">
-            <h2 className="text-2xl font-semibold text-gray-800">
+        <header className="bg-white shadow-sm border-b border-gray-200">
+          <div className="flex items-center justify-between px-8 h-16">
+            <h2 className="text-2xl font-bold text-gray-800">
               {menuItems.find((item) => isActive(item.path, item.exact))
                 ?.name || "Admin Panel"}
             </h2>
-            <div className="hidden md:flex items-center space-x-4">
-              <div className="text-sm text-gray-500">
-                <p
-                  className="cursor-pointer hover:underline text-red-500 text-lg font-semibold"
-                  onClick={logout}
-                >
-                  Logout
-                </p>
-              </div>
-            </div>
+
+            <button
+              onClick={logout}
+              className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-medium transition cursor-pointer"
+            >
+              Logout
+            </button>
           </div>
         </header>
 

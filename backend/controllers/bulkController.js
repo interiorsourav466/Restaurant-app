@@ -7,12 +7,12 @@ export const bulkUploadMenus = async (req, res) => {
     const menus = JSON.parse(fs.readFileSync("./data/menus.json", "utf-8"));
 
     for (const item of menus) {
-      // find category
+     
       let category = await Category.findOne({
         name: item.category,
       });
 
-      // create category if not exists
+      
       if (!category) {
         category = await Category.create({
           name: item.category,
@@ -20,7 +20,7 @@ export const bulkUploadMenus = async (req, res) => {
         });
       }
 
-      // create menu item
+   
       await Menu.create({
         name: item.name,
         description: item.description,
@@ -29,6 +29,7 @@ export const bulkUploadMenus = async (req, res) => {
         category: category._id,
         rating: item.rating,
         isAvailable: item.isAvailable, 
+        isSpecial: item.isSpecial,
       });
     }
 

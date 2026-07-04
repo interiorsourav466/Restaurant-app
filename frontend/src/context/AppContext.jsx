@@ -18,36 +18,49 @@ const AppContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [categoryLoading, setCategoryLoading] = useState(true);
-  const fetchCategories = async () => {
-    try {
-      setCategoryLoading(true);
+  const [menuPage, setMenuPage] = useState(1);
+  const [menuTotalPages, setMenuTotalPages] = useState(1);
+  const [categoryPage, setCategoryPage] = useState(1);
+  const [categoryTotalPages, setCategoryTotalPages] = useState(1);
 
-      const { data } = await axios.get("/api/category/all");
+ const fetchCategories = async (page = 1) => {
+  try {
+    setCategoryLoading(true);
 
-      if (data.success) {
-        setCategories(data.categories);
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setCategoryLoading(false);
+    const { data } = await axios.get(
+      `/api/category/all?page=${page}&limit=10`
+    );
+
+    if (data.success) {
+      setCategories(data.categories);
+      setCategoryPage(data.currentPage);
+      setCategoryTotalPages(data.totalPages);
     }
-  };
-  
+  } catch (error) {
+    console.log(error);
+  } finally {
+    setCategoryLoading(false);
+  }
+};
 
   useEffect(() => {
     if (cart?.items) {
-      const total = cart.items.reduce(
-        (sum, item) => sum + item.menuItem.price * item.quantity,
-        0,
-      );
+      const total = cart.items.reduce((sum, item) => {
+        if (!item.menuItem) return sum;
+
+        return sum + item.menuItem.price * item.quantity;
+      }, 0);
 
       setTotalPrice(total);
     }
   }, [cart]);
 
   const cartCount =
-    cart?.items?.reduce((acc, item) => acc + item.quantity, 0) || 0;
+    cart?.items?.reduce((acc, item) => {
+      if (!item.menuItem) return acc;
+
+      return acc + item.quantity;
+    }, 0) || 0;
 
   const addToCart = async (menuId) => {
     try {
@@ -69,35 +82,31 @@ const AppContextProvider = ({ children }) => {
       toast.error("Something went wrong");
     }
   };
-const fetchCartData = async () => {
-
-  try {
-
-    const { data } = await axios.get("/api/cart/get");
-
-    if (data.success) {
-      setCart(data.cart);
-    }
-
-  } catch (error) {
-
-    console.log(error);
-
-  }
-};
-
-  const fetchMenus = async () => {
+  const fetchCartData = async () => {
     try {
-      const { data } = await axios.get("/api/menu/all");
+      const { data } = await axios.get("/api/cart/get");
 
       if (data.success) {
-        setMenus(data.menuItems);
+        setCart(data.cart);
       }
     } catch (error) {
       console.log(error);
     }
   };
 
+  const fetchMenus = async (page = 1) => {
+    try {
+      const { data } = await axios.get(`/api/menu/all?page=${page}&limit=12`);
+
+      if (data.success) {
+        setMenus(data.menuItems);
+        setMenuPage(data.currentPage);
+        setMenuTotalPages(data.totalPages);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const isAuth = async () => {
     try {
       const { data } = await axios.get("/api/auth/is-auth");
@@ -112,13 +121,17 @@ const fetchCartData = async () => {
 
   useEffect(() => {
     isAuth();
-
     fetchCategories();
-
     fetchMenus();
-
-    fetchCartData();
+    // fetchCartData();
   }, []);
+  useEffect(() => {
+    if (user) {
+      fetchCartData();
+    } else {
+      setCart([]);
+    }
+  }, [user]);
 
   const value = {
     navigate,
@@ -131,15 +144,23 @@ const fetchCartData = async () => {
     setAdmin,
 
     categories,
+    fetchCategories,
+
     menus,
     fetchMenus,
-    fetchCategories,
+    menuPage,
+    setMenuPage,
+    menuTotalPages,
+
     addToCart,
     cart,
     cartCount,
     totalPrice,
     fetchCartData,
     categoryLoading,
+    categoryPage,
+categoryTotalPages,
+setCategoryPage,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

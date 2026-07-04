@@ -5,6 +5,7 @@ import { AppContext } from "../context/AppContext";
 const Categories = () => {
   const { categories, navigate } = useContext(AppContext);
   const [categoryLoading, setCategoryLoading] = useState(true);
+  
   return (
     <section className="py-20 bg-[#fffaf5]">
       <div className="max-w-7xl mx-auto px-6">

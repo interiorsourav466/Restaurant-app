@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Kolkata Mutton Chop",
+    "description": "Street-style deep-fried minced mutton croquette spiced with ginger, garlic, and hot garam masala, breaded crisp",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Kolkata Street Food",
+    "rating": 4.7,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Bhetki Macher Paturi",
+    "description": "Premium boneless Bhetki fish fillet marinated in a sharp mustard-coconut paste, wrapped in banana leaf and steamed",
+    "price": 310,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Mains",
+    "rating": 4.9,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Murgh Malai Kebab",
+    "description": "Six melt-in-the-mouth chicken breast chunks marinated in cheese cream, green cardamom, and white pepper, char-grilled",
+    "price": 265,
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0",
+    "category": "Tandoori Starters",
+    "rating": 4.8,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Paneer Tikka Masala Gravy",
+    "description": "Smoky clay-oven roasted cottage cheese cubes cooked inside a highly spiced onion-tomato curry with a touch of heavy cream",
+    "price": 240,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
+    "category": "Curries",
+    "rating": 4.7,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Kolkata Chicken Dum Biryani Special",
+    "description": "Fragrant long-grain basmati rice slow dum cooked with tender chicken, spiced hard-boiled egg, and a soft ghee-infused potato",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a",
+    "category": "Biryani",
+    "rating": 4.9,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Triple Egg Double Chicken Roll",
+    "description": "Massive street-style flaky paratha layered with three cracked farm eggs, packed tightly with juicy pan-roasted chicken chunks",
+    "price": 210,
+    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
+    "category": "Kolkata Street Food",
+    "rating": 4.9,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Chilli Garlic Chicken Fried Rice",
+    "description": "Wok-fried long-grain rice tossed fiercely with shredded chicken breasts, egg threads, crushed dry red chillies, and burnt garlic",
+    "price": 215,
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+    "category": "Rice & Noodles",
+    "rating": 4.6,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Schezwan Mixed Noodles Blast",
+    "description": "Stir-fried flour noodles loaded with chicken strips, small prawns, egg ribbons, and a scorching hot homemade Szechuan paste",
+    "price": 240,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+    "category": "Rice & Noodles",
+    "rating": 4.8,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Peri Peri Paneer Loaded Burger",
+    "description": "A thick, crispy crumb-fried cottage cheese slab drenched in fiery African peri-peri sauce, topped with melted processed cheese",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "category": "Burgers & Sandwiches",
+    "rating": 4.5,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Baked Choco Lava Avalanche",
+    "description": "Decadent circular chocolate sponge cup cake containing an ultra-warm molten chocolate core, served with a vanilla scoop side",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e",
+    "category": "Desserts",
+    "rating": 4.8,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Thick Belgian Chocolate Shake",
+    "description": "Ultra-rich cold milkshake prepared by blending heavy cocoa sauce, dark chocolate shavings, and full-fat dairy milk",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
+    "category": "Beverages",
+    "rating": 4.7,
+    "isAvailable": true,
+    "isSpecial": true
+  },
+  {
+    "name": "Gondhoraj Lime Mint Virgin Mojito",
+    "description": "A highly refreshing clear summer mocktail made with muddled mint leaf clusters, sugar syrup, and premium Gondhoraj lime juice",
+    "price": 95,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+    "category": "Beverages",
+    "rating": 4.8,
+    "isAvailable": true,
+    "isSpecial": true
+  }
+]

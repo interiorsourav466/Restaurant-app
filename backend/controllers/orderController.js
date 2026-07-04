@@ -80,7 +80,7 @@ export const updateOrderStatus = async (req, res) => {
     order.status = status;
     await order.save();
 
-    res.json({ message: "order status updated", success: true });
+    res.json({ message: "Order Status Updated", success: true });
   } catch (error) {
     console.log(error);
     return res.json({ message: "Internal server error", success: false });

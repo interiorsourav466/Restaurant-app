@@ -31,44 +31,60 @@ export const addMenuItem = async (req, res) => {
 
 export const getAllMenuItems = async (req, res) => {
   try {
-    // search query
     const search = req.query.search || "";
+    const category = req.query.category || "";
+    const special = req.query.special;
 
-    // pagination
     const page = Number(req.query.page) || 1;
     const limit = Number(req.query.limit) || 12;
-
     const skip = (page - 1) * limit;
 
     let filter = {};
-
-    if (search && search.trim() !== "") {
+    if (special === "true") {
+      filter.isSpecial = true;
+    }
+    // Search
+    if (search.trim()) {
       filter.name = {
         $regex: search.trim(),
         $options: "i",
       };
     }
 
-    // total items
+    // Category
+    if (category.trim()) {
+      const categoryDoc = await Category.findOne({
+        name: category.trim(),
+      });
+
+      console.log("Category:", category);
+      console.log("Category Doc:", categoryDoc);
+
+      if (categoryDoc) {
+        filter.category = categoryDoc._id;
+      }
+    }
+
+    console.log("Filter:", filter);
+    // console.log(req.query);
+
     const totalMenus = await Menu.countDocuments(filter);
 
-    // menus
     const menuItems = await Menu.find(filter)
       .populate("category", "name")
       .skip(skip)
       .limit(limit)
       .sort({ createdAt: -1 });
-
-    res.status(200).json({
+    console.log(menuItems);
+    res.json({
       success: true,
       menuItems,
+      totalMenus,
       currentPage: page,
       totalPages: Math.ceil(totalMenus / limit),
-      totalMenus,
     });
   } catch (error) {
     console.log(error);
-
     res.json({
       success: false,
       message: "Internal server error",
@@ -115,5 +131,26 @@ export const deleteMenuItem = async (req, res) => {
   } catch (error) {
     console.log(error);
     return res.json({ message: "Internal server error", success: false });
+  }
+};
+export const getSpecialMenus = async (req, res) => {
+  try {
+    const menuItems = await Menu.find({
+      isSpecial: true,
+    })
+      .populate("category", "name")
+      .limit(8);
+
+    res.json({
+      success: true,
+      menuItems,
+    });
+  } catch (error) {
+    console.log(error);
+
+    res.json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };

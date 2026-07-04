@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 const Checkout = () => {
   const { totalPrice, axios, navigate } = useContext(AppContext);
   const [address, setAddress] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("Pay at hotel");
+  const [paymentMethod, setPaymentMethod] = useState("Cash on delivery");
 
   const handleCheckout = async () => {
     if (!address) {
@@ -54,7 +54,7 @@ const Checkout = () => {
             <p className="flex justify-between text-lg font-medium text-gray-700">
               <span>Total Amount:</span>
               <span className="text-green-600 font-semibold">
-                $. {totalPrice}
+                ₹{totalPrice}
               </span>
             </p>
           </div>
@@ -67,11 +67,11 @@ const Checkout = () => {
               <input
                 type="radio"
                 name="payment"
-                value="Pay at hotel"
-                checked={paymentMethod === "Pay at hotel"}
+                value="Cash on delivery"
+                checked={paymentMethod === "Cash on delivery"}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
-              <span>Pay at hotel</span>
+              <span>Cash on delivery</span>
             </label>
 
             <label className="flex items-center space-x-3">

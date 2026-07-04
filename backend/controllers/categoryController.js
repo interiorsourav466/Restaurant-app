@@ -38,12 +38,32 @@ export const addCategory = async (req, res) => {
 
 export const getAllCategories = async (req, res) => {
   try {
-    const categories = await Category.find().limit(10).sort({ createdAt: -1 });
-    res.status(200).json({ success: true, categories });
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 10;
+
+    const skip = (page - 1) * limit;
+
+    const totalCategories = await Category.countDocuments();
+
+    const categories = await Category.find()
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit);
+
+    res.json({
+      success: true,
+      categories,
+      currentPage: page,
+      totalPages: Math.ceil(totalCategories / limit),
+      totalCategories,
+    });
   } catch (error) {
     console.log(error);
 
-    return res.json({ message: "Internal server error", success: false });
+    res.json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };
 

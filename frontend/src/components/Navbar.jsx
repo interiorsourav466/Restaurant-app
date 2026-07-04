@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   Calendar,
   LogOut,
@@ -13,27 +13,17 @@ import {
 import toast from "react-hot-toast";
 
 const Navbar = () => {
-
-  const {
-    navigate,
-    user,
-    setUser,
-    axios,
-    cartCount,
-  } = useContext(AppContext);
+  const { navigate, user, setUser, axios, cartCount } = useContext(AppContext);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const logout = async () => {
-
     try {
-
       const { data } = await axios.post("/api/auth/logout");
 
       if (data.success) {
-
         setUser(null);
 
         localStorage.removeItem("admin");
@@ -41,177 +31,149 @@ const Navbar = () => {
         toast.success(data.message);
 
         navigate("/");
-
       }
-
     } catch (error) {
-
       console.log(error);
-
     }
-
   };
 
   return (
     <nav className="bg-[#fffaf5]/95 backdrop-blur-md border-b border-orange-100 shadow-sm sticky top-0 z-50 py-4">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         <div className="flex items-center justify-between">
-
           {/* Logo */}
           <div className="flex items-center">
-
             <Link to={"/"}>
-
               <h1 className="text-3xl font-extrabold text-orange-400 tracking-wide">
                 Flavoro
               </h1>
-
             </Link>
-
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-
-            <Link
-              to={"/"}
-              className="text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium"
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none ${
+                  isActive
+                    ? "bg-orange-100 text-orange-600"
+                    : "text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                }`
+              }
             >
               Home
-            </Link>
+            </NavLink>
 
-            <Link
-              to={"/menu"}
-              className="text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium"
+            <NavLink
+              to="/menu"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none ${
+                  isActive
+                    ? "bg-orange-100 text-orange-600"
+                    : "text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                }`
+              }
             >
               Menus
-            </Link>
+            </NavLink>
 
-            <Link
-              to={"/book-table"}
-              className="text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium"
+            <NavLink
+              to="/book-table"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none ${
+                  isActive
+                    ? "bg-orange-100 text-orange-600"
+                    : "text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                }`
+              }
             >
               Book Table
-            </Link>
+            </NavLink>
 
-            <Link
-              to={"/contact"}
-              className="text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium"
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none ${
+                  isActive
+                    ? "bg-orange-100 text-orange-600"
+                    : "text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                }`
+              }
             >
               Contact
-            </Link>
-
+            </NavLink>
           </div>
 
           {/* Right Side */}
           <div className="flex items-center space-x-4">
-
             {/* Cart */}
             <button
               onClick={() => navigate("/cart")}
-              className="relative p-2 rounded-full hover:bg-gray-800 transition duration-300"
+              className="relative p-2 rounded-full bg-orange-100 hover:bg-orange-200 transition-all duration-300 cursor-pointer"
             >
-
               <ShoppingCart
                 size={24}
-                className="text-gray-700"
+                className="text-orange-600 hover:text-orange-700"
               />
 
-              <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center shadow">
                 {cartCount > 0 ? cartCount : 0}
               </span>
-
             </button>
 
             {/* Profile */}
             <div className="hidden md:block">
-
               {user ? (
-
-                <div className="relative">
-
-                  <button
-                    onMouseEnter={() => setIsProfileOpen(true)}
-                    onMouseLeave={() => setIsProfileOpen(false)}
-                    className="p-2 rounded-full hover:bg-gray-800 transition duration-300"
-                  >
-
+                <div
+                  className="relative"
+                  onMouseEnter={() => setIsProfileOpen(true)}
+                  onMouseLeave={() => setIsProfileOpen(false)}
+                >
+                  <button className="p-2 rounded-full">
                     <UserCircle
                       size={32}
-                      className="text-gray-700"
+                      className="text-orange-500 cursor-pointer"
                     />
-
                   </button>
 
                   {isProfileOpen && (
-
-                    <div
-                      onMouseEnter={() => setIsProfileOpen(true)}
-                      onMouseLeave={() => setIsProfileOpen(false)}
-                      className="absolute right-0 mt-2 w-52 bg-white border border-gray-200 rounded-2xl shadow-2xl py-3"
-                    >
-
+                    <div className="absolute right-0 w-56 bg-white border border-orange-100 rounded-2xl shadow-xl py-2 overflow-hidden">
                       <Link
-                        to={"/my-bookings"}
-                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-800 transition"
+                        to="/my-bookings"
+                        className="flex items-center gap-3 px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-200"
                       >
-
-                        <Calendar
-                          size={18}
-                          className="mr-3"
-                        />
-
-                        My Bookings
-
+                        <Calendar size={18} />
+                        <span>My Bookings</span>
                       </Link>
 
                       <Link
-                        to={"/my-orders"}
-                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-800 transition"
+                        to="/my-orders"
+                        className="flex items-center gap-3 px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-200"
                       >
-
-                        <Package
-                          size={18}
-                          className="mr-3"
-                        />
-
-                        My Orders
-
+                        <Package size={18} />
+                        <span>My Orders</span>
                       </Link>
 
                       <button
                         onClick={logout}
-                        className="flex items-center w-full px-4 py-3 text-red-400 hover:bg-gray-800 transition"
+                        className="flex items-center gap-3 w-full px-5 py-3 text-red-500 hover:bg-red-50 hover:text-red-600 transition-all duration-200 cursor-pointer"
                       >
-
-                        <LogOut
-                          size={18}
-                          className="mr-3"
-                        />
-
-                        Logout
-
+                        <LogOut size={18} />
+                        <span>Logout</span>
                       </button>
-
                     </div>
-
                   )}
-
                 </div>
-
               ) : (
-
                 <button
                   onClick={() => navigate("/login")}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition duration-300 shadow-lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition duration-300 shadow-lg cursor-pointer"
                 >
                   Login
                 </button>
-
               )}
-
             </div>
 
             {/* Mobile Menu Button */}
@@ -219,20 +181,14 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-gray-700"
             >
-
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-
             </button>
-
           </div>
-
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-
           <div className="md:hidden mt-6 bg-[#1a1a1a] rounded-2xl border border-gray-800 p-5 space-y-5">
-
             <Link
               to={"/"}
               className="block text-gray-700 hover:text-orange-500"
@@ -262,38 +218,24 @@ const Navbar = () => {
             </Link>
 
             {user ? (
-
               <button
                 onClick={logout}
-                className="flex items-center text-red-400"
+                className="flex items-center text-red-400 cursor-pointer"
               >
-
-                <LogOut
-                  size={18}
-                  className="mr-2"
-                />
-
+                <LogOut size={18} className="mr-2" />
                 Logout
-
               </button>
-
             ) : (
-
               <button
                 onClick={() => navigate("/login")}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full cursor-pointer"
               >
                 Login
               </button>
-
             )}
-
           </div>
-
         )}
-
       </div>
-
     </nav>
   );
 };

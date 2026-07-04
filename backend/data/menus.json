@@ -81,183 +81,291 @@
     "isAvailable": true
   },
   {
-    "name": "Chicken Tikka",
-    "description": "Smoky clay-oven roasted boneless chicken marinated in yogurt and spices",
-    "price": 240,
-    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0",
-    "category": "Starters",
+    "name": "Malabar Short Grain Kaima Rice Chicken Biryani Dum",
+    "description": "Fragrant short kaima rice grains slow dum cooked with tender country chicken parts, pure ghee, and fried gold onion petals",
+    "price": 265,
+    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a",
+    "category": "Biryani",
     "rating": 4.7,
     "isAvailable": true
   },
   {
-    "name": "Paneer Tikka",
-    "description": "Grilled cottage cheese cubes marinated with spices and yogurt",
-    "price": 200,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8",
-    "category": "Starters",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Tandoori Chicken Full",
-    "description": "Whole chicken marinated in tandoori masala and roasted to perfection",
-    "price": 450,
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91",
-    "category": "Starters",
+    "name": "Sindhi Mutton Biryani",
+    "description": "Super spicy layered basmati rice cooked with tender goat meat, plums, and baby potatoes",
+    "price": 370,
+    "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0",
+    "category": "Biryani",
     "rating": 4.8,
     "isAvailable": true
   },
   {
-    "name": "Tandoori Chicken Half",
-    "description": "Half chicken marinated in spices and grilled in a clay oven",
-    "price": 250,
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91",
-    "category": "Starters",
-    "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Chicken Seekh Kebab",
-    "description": "Minced chicken seasoned with fresh herbs and grilled on skewers",
+    "name": "Ambur Chicken Biryani",
+    "description": "Traditional South Indian biryani made with Seeraga samba rice and a rich garlic-chili paste",
     "price": 230,
-    "image": "https://images.unsplash.com/photo-1628102476695-814a35747607",
-    "category": "Starters",
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Biryani",
     "rating": 4.6,
     "isAvailable": true
   },
   {
-    "name": "Mutton Seekh Kebab",
-    "description": "Succulent minced mutton skewers roasted in charcoal tandoor",
-    "price": 310,
-    "image": "https://images.unsplash.com/photo-1628102476695-814a35747607",
-    "category": "Starters",
-    "rating": 4.8,
-    "isAvailable": true
-  },
-  {
-    "name": "Hara Bhara Kebab",
-    "description": "Crispy vegetarian patties made of spinach, peas, and potatoes",
-    "price": 160,
-    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
-    "category": "Starters",
+    "name": "Mushroom Dum Biryani",
+    "description": "Fresh juicy button mushrooms slow-cooked with mint, saffron strings, and premium basmati rice",
+    "price": 190,
+    "image": "https://images.unsplash.com/photo-1642821356980-36647b5d39ec",
+    "category": "Biryani",
     "rating": 4.3,
     "isAvailable": true
   },
   {
-    "name": "Chicken Lollipop",
-    "description": "Deep-fried chicken wings coated in a spicy red batter",
-    "price": 220,
-    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d",
-    "category": "Starters",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Chilli Paneer Dry",
-    "description": "Wok-tossed paneer cubes with bell peppers, onions, and dark soy sauce",
-    "price": 190,
-    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
-    "category": "Starters",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Veg Manchurian Dry",
-    "description": "Deep-fried mixed vegetable balls tossed in a tangy Manchurian sauce",
-    "price": 170,
-    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
-    "category": "Starters",
+    "name": "Soya Chaap Dum Biryani",
+    "description": "Marinated tandoori soya chaap chunks layered deeply with aromatic long-grain dum rice",
+    "price": 195,
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Biryani",
     "rating": 4.4,
     "isAvailable": true
   },
   {
-    "name": "Crispy Corn",
-    "description": "Fried sweet corn kernels tossed with onions, green chillies, and spices",
-    "price": 150,
-    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
-    "category": "Starters",
-    "rating": 4.3,
+    "name": "Lucknowi Mutton Biryani",
+    "description": "Awadhi style delicate, clean, and highly fragrant white-layered meat biryani with a trace of rosewater",
+    "price": 380,
+    "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0",
+    "category": "Biryani",
+    "rating": 4.9,
     "isAvailable": true
   },
   {
-    "name": "Chicken 65",
-    "description": "Spicy, deep-fried chicken bites tempered with curry leaves and green chillies",
-    "price": 230,
-    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d",
-    "category": "Starters",
-    "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Gobi Manchurian",
-    "description": "Crispy cauliflower florets tossed in Indo-Chinese sauces",
-    "price": 160,
-    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
-    "category": "Starters",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "French Fries",
-    "description": "Classic golden crispy salted potato fries",
-    "price": 100,
-    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
-    "category": "Starters",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "Peri Peri Fries",
-    "description": "Crispy French fries dusted with a spicy African peri-peri seasoning",
-    "price": 120,
-    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
-    "category": "Starters",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Cheese Corn Balls",
-    "description": "Deep-fried breaded balls stuffed with gooey cheese and sweet corn",
-    "price": 180,
-    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
-    "category": "Starters",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Chicken Malai Tikka",
-    "description": "Creamy boneless chicken kebabs marinated in cream, cheese, and mild spices",
-    "price": 260,
-    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0",
-    "category": "Starters",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Fish Amritsari",
-    "description": "Batter-fried fish fingers seasoned with carom seeds and spices",
-    "price": 290,
-    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d",
-    "category": "Starters",
-    "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Dahi Ke Kebab",
-    "description": "Soft and creamy hung curd patties with a crunchy exterior",
-    "price": 190,
-    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
-    "category": "Starters",
+    "name": "Fish Tikka Dum Biryani",
+    "description": "Boneless tandoori fish pieces arranged over saffron-scented long-grain basmati rice layers",
+    "price": 340,
+    "image": "https://images.unsplash.com/photo-1642821356980-36647b5d39ec",
+    "category": "Biryani",
     "rating": 4.5,
     "isAvailable": false
   },
   {
-    "name": "Mushroom Duplex",
-    "description": "Stuffed mushroom caps coated in breadcrumbs and deep fried",
-    "price": 210,
-    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8",
-    "category": "Starters",
+    "name": "Kolkata Egg Flat Mughlai Street Paratha Wrap",
+    "description": "Deep fried crisp thin flour bread square folded internally with heavy layers of egg wash, raw minced onions, and chillies",
+    "price": 135,
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
+    "category": "Kolkata Street Food",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Mughlai Mutton Kathi Roll Wrap",
+    "description": "Street style flaky gratha wrap stuffed tightly with pan-roasted boneless goat chunks, raw lime juice onions, and chili lines",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
+    "category": "Kolkata Street Food",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Mutton Mughlai Paratha Pack",
+    "description": "Crisp heavy deep-fried flatbread stuffed to the inner corners with minced seasoned goat meat, egg wash, and onions",
+    "price": 185,
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
+    "category": "Kolkata Street Food",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Crispy Lacy Nest Fish Kabiraji Cutlet",
+    "description": "Minced pure fish fillet block wrapped inside an incredibly fine, golden crispy brittle net mesh of fried egg batter fluff",
+    "price": 195,
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
+    "category": "Kolkata Street Food",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Egg Mughlai Paratha",
+    "description": "Deep-fried crisp square flatbread layered inside with whisked eggs, green chillies, and minced raw onions",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
+    "category": "Kolkata Street Food",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Chicken Roll Classic",
+    "description": "Paratha layered with egg, wrapped around juicy pan-seared chicken cubes, raw onions, and tangy sauces",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
+    "category": "Kolkata Street Food",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Double Chicken Double Egg Roll",
+    "description": "Extra loaded street kathi roll filled with two portions of spiced chicken pieces and two farm eggs",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
+    "category": "Kolkata Street Food",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Fish Fry (Premium Bhetki)",
+    "description": "Pure Calcutta Bhetki fillet marinated in green herbs, diamond crumb coated and deep fried till golden crisp",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
+    "category": "Kolkata Street Food",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "name": "Chingri Malai Curry Coconut",
+    "description": "Authentic Bengali festive dish containing fresh gold prawns simmered inside sweet-creamy spiced coconut milk",
+    "price": 390,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Kosha Mangsho Mutton",
+    "description": "Rich velvet-gravy bone-in goat meat slow-cooked intensely over hours inside pungent mustard oil and deep spices",
+    "price": 380,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "name": "Sorse Bhetki Fillet Fish",
+    "description": "Pure Bhetki fish steak simmered gently inside a sharp, high-pungent stone-ground yellow mustard paste gravy",
+    "price": 320,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Bengali Chholar Dal Sweet",
+    "description": "Sweet split Bengal gram lentils cooked with bay leaves, ginger paste, and heavily mixed fried coconut slices",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Traditional Satvik Dhokar Dalna Cumin Potato Curry",
+    "description": "Fried steamed Bengal gram lentil diamond cubes cooked inside a rich golden gravy sauce composed of cumin, ginger, and anise",
+    "price": 165,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
     "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "name": "Anglo-Indian House Chicken Dak Bungalow",
+    "description": "Heritage country chicken stew containing slow-cooked whole red baby potatoes and one hard-boiled farm egg",
+    "price": 285,
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Shukto Traditional",
+    "description": "Classic Bengali bittersweet assorted vegetable medley cooked with bitter gourd, raw banana, and bori in ginger-radhuni milk gravy",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Pabda Jhal Sorse",
+    "description": "Tender Pabda catfish simmered in a light yet sharp mustard and green chili sauce base with nigella tempering",
+    "price": 290,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Aloo Posto Classic",
+    "description": "Traditional comfort dish made of diced potatoes slow-cooked in a rich and aromatic ground poppy seed paste",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "Bengali Traditional Mains",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Crispy Golden Rava Dosa Semolina Crepe",
+    "description": "Paper thin lacy crunchy crepe made from roasted semolina batter grains, sprinkled internally with whole black pepper grains",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Idli Sambar Regular (2 Pcs)",
+    "description": "Two fluffy steamed rice cakes made from fermented batter, served alongside hot vegetable lentil soup and coconut dip",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Medu Vada (2 Pcs)",
+    "description": "Crispy, deep-fried savory doughnut-shaped fritters made from black gram batter, loaded with peppercorns",
+    "price": 70,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Classic Masala Dosa",
+    "description": "Thin and crispy fermented rice crepe stuffed with a lightly spiced smashed potato and onion mash",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Mysore Masala Dosa",
+    "description": "Crisp crepe lined internally with a fiery red garlic-chutney paste before layout of potato masala",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Onion Tomato Uttapam",
+    "description": "Thick rice pancake topped cleanly with finely diced red tomatoes, raw onions, green chillies, and pure ghee",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Ghee Podi Dosa",
+    "description": "Crispy paper-thin dosa brushed with pure aromatic cow ghee and dusted with spicy gun powder masala",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Cheese Stuffed Masala Dosa",
+    "description": "Golden rice crepe layered with a rich blending of processed cheese and a classic savory potato filling",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc",
+    "category": "South Indian Staples",
+    "rating": 4.6,
     "isAvailable": true
   },
   {
@@ -265,7 +373,7 @@
     "description": "Tandoori chicken pieces cooked in a rich, creamy tomato and butter gravy",
     "price": 280,
     "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.9,
     "isAvailable": true
   },
@@ -274,7 +382,7 @@
     "description": "Cottage cheese cubes in a rich, creamy tomato and cashew nut gravy",
     "price": 220,
     "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.8,
     "isAvailable": true
   },
@@ -283,7 +391,7 @@
     "description": "Paneer cooked with bell peppers and freshly ground spices in a wok",
     "price": 210,
     "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -292,7 +400,7 @@
     "description": "Roasted chicken tikka pieces served in a spicy and creamy onion-tomato gravy",
     "price": 270,
     "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.8,
     "isAvailable": true
   },
@@ -301,7 +409,7 @@
     "description": "Traditional Kashmiri mutton curry cooked with aromatic spices and yogurt",
     "price": 360,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.9,
     "isAvailable": true
   },
@@ -310,7 +418,7 @@
     "description": "Black lentils slow-cooked overnight with cream, butter, and tomatoes",
     "price": 180,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.8,
     "isAvailable": true
   },
@@ -319,7 +427,7 @@
     "description": "Yellow lentils tempered with ghee, cumin, garlic, and red chillies",
     "price": 140,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.5,
     "isAvailable": true
   },
@@ -328,17 +436,8 @@
     "description": "Cottage cheese cubes in a smooth, spiced spinach purée",
     "price": 200,
     "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Mix Veg Curry",
-    "description": "Assorted vegetables cooked in a semi-dry onion and tomato masala",
-    "price": 170,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
-    "rating": 4.3,
     "isAvailable": true
   },
   {
@@ -346,7 +445,7 @@
     "description": "Spicy and tangy chickpea curry cooked with Punjabi spices",
     "price": 160,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.5,
     "isAvailable": true
   },
@@ -355,7 +454,7 @@
     "description": "Rich Mughlai chicken curry made with yogurt, nuts, and fragrant spices",
     "price": 290,
     "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -364,7 +463,7 @@
     "description": "Okra cooked with an abundance of onions and Indian spices",
     "price": 160,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -373,17 +472,8 @@
     "description": "Deep-fried paneer and potato balls served in a rich, sweet, and creamy gravy",
     "price": 230,
     "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Egg Curry",
-    "description": "Boiled eggs simmered in a spiced onion-tomato gravy",
-    "price": 170,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
-    "rating": 4.5,
     "isAvailable": true
   },
   {
@@ -391,7 +481,7 @@
     "description": "Tender mutton cooked in a thick gravy of nuts, seeds, and yogurt",
     "price": 370,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.8,
     "isAvailable": true
   },
@@ -400,7 +490,7 @@
     "description": "Button mushrooms cooked in a spicy onion, tomato, and cashew gravy",
     "price": 190,
     "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.5,
     "isAvailable": true
   },
@@ -409,7 +499,7 @@
     "description": "Classic dry dish made with potatoes, cauliflower, and mild spices",
     "price": 150,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.3,
     "isAvailable": true
   },
@@ -418,26 +508,62 @@
     "description": "Juicy prawns cooked in a coastal-style spicy coconut and tomato gravy",
     "price": 390,
     "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.7,
     "isAvailable": false
-  },
-  {
-    "name": "Methi Chaman",
-    "description": "Kashmiri dish featuring paneer in a grated spinach and fenugreek leaf gravy",
-    "price": 210,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
-    "category": "Curries",
-    "rating": 4.5,
-    "isAvailable": true
   },
   {
     "name": "Chicken Rara",
     "description": "Flavorful combination of chicken pieces and minced chicken cooked in a thick gravy",
     "price": 310,
     "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
-    "category": "Curries",
+    "category": "North Indian Curries",
     "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Lababdar Thick Gravy",
+    "description": "Cottage cheese chunks cooked inside a premium smooth tomato gravy enriched with grated paneer skin and butter",
+    "price": 230,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7",
+    "category": "North Indian Curries",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Do Pyaza Chunky",
+    "description": "Juicy goat meat cuts slow-braised alongside thick squares of sweet translucent caramelized red onions",
+    "price": 370,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "North Indian Curries",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Chicken Tikka Cream Loaded Orange Gravy",
+    "description": "Clay oven roasted boneless chicken chunks served swimming inside a rich semi sweet orange onion tomato cream gravy paste",
+    "price": 275,
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    "category": "North Indian Curries",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Authentic Mughlai Chicken Handi Earthen Curry",
+    "description": "Bone-in chicken parts cooked continuous inside an iron handi wok over slow heat with deep red onion masala gravy paste",
+    "price": 280,
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
+    "category": "North Indian Curries",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Keema Matar Masala Semi Dry",
+    "description": "Premium minced goat meat paste slow-braised over high fire inside rich onion paste with sweet green winter peas grains",
+    "price": 380,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+    "category": "North Indian Curries",
+    "rating": 4.9,
     "isAvailable": true
   },
   {
@@ -445,7 +571,7 @@
     "description": "Traditional flatbread made from refined flour, baked in a clay oven",
     "price": 40,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -454,7 +580,7 @@
     "description": "Soft tandoor-baked flatbread generously brushed with butter",
     "price": 50,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -463,7 +589,7 @@
     "description": "Leavened flatbread garnished with minced garlic and butter",
     "price": 65,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.8,
     "isAvailable": true
   },
@@ -472,7 +598,7 @@
     "description": "Whole wheat flour bread baked in a clay tandoor",
     "price": 25,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -481,7 +607,7 @@
     "description": "Whole wheat tandoori bread topped with fresh butter",
     "price": 30,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.5,
     "isAvailable": true
   },
@@ -490,7 +616,7 @@
     "description": "Multi-layered, flaky whole wheat flatbread baked in tandoor",
     "price": 55,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.6,
     "isAvailable": true
   },
@@ -499,7 +625,7 @@
     "description": "Soft flatbread stuffed with spiced potatoes and onions",
     "price": 70,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -508,7 +634,7 @@
     "description": "Naan bread stuffed with melted cheese, baked to perfection",
     "price": 90,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -517,7 +643,7 @@
     "description": "Savory gram flour flatbread seasoned with spices and herbs",
     "price": 45,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -526,8 +652,35 @@
     "description": "Extremely thin, soft, and handkerchief-like flatbread cooked on an inverted wok",
     "price": 35,
     "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
-    "category": "Breads",
+    "category": "Indian Flatbreads",
     "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Kolkata Khasta Luchi (4 Pcs)",
+    "description": "Puffed deep-fried refined flour golden flatbreads, perfect for pairing with potato or mutton curries",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
+    "category": "Indian Flatbreads",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Whole Wheat Layered Ring Pudina Lachha Paratha",
+    "description": "Flaky griddle toasted flatbread composed of multi layered wheat rings infused heavily with dry mint leaf spice powder",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
+    "category": "Indian Flatbreads",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Malabar Parotta Layered Bread Plate (2 Pcs)",
+    "description": "Two flaky, multi-layered spiral whole wheat flatbreads prepared over flat iron tawa, brushed with clear oil skin",
+    "price": 65,
+    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78",
+    "category": "Indian Flatbreads",
+    "rating": 4.6,
     "isAvailable": true
   },
   {
@@ -535,7 +688,7 @@
     "description": "Wok-fried rice tossed with chopped vegetables and light soy sauce",
     "price": 160,
     "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
-    "category": "Rice & Noodles",
+    "category": "Rice & Pulao",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -544,7 +697,7 @@
     "description": "Scrambled eggs wok-tossed with aromatic basmati rice and spring onions",
     "price": 180,
     "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
-    "category": "Rice & Noodles",
+    "category": "Rice & Pulao",
     "rating": 4.5,
     "isAvailable": true
   },
@@ -553,43 +706,7 @@
     "description": "Classic fried rice cooked with shredded chicken, eggs, and veggies",
     "price": 200,
     "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
-    "category": "Rice & Noodles",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Veg Hakka Noodles",
-    "description": "Stir-fried noodles with crisp vegetables and Indo-Chinese condiments",
-    "price": 160,
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "category": "Rice & Noodles",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "Chicken Hakka Noodles",
-    "description": "Stir-fried noodles tossed with chicken strips, egg, and mixed vegetables",
-    "price": 210,
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "category": "Rice & Noodles",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Schezwan Veg Fried Rice",
-    "description": "Spicy fried rice flavored with fiery homemade Schezwan sauce",
-    "price": 170,
-    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
-    "category": "Rice & Noodles",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Schezwan Chicken Noodles",
-    "description": "Spicy stir-fried noodles with chicken, coated in hot Schezwan sauce",
-    "price": 220,
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "category": "Rice & Noodles",
+    "category": "Rice & Pulao",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -598,7 +715,7 @@
     "description": "Fragrant basmati rice tempered with cumin seeds and pure ghee",
     "price": 120,
     "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
-    "category": "Rice & Noodles",
+    "category": "Rice & Pulao",
     "rating": 4.4,
     "isAvailable": true
   },
@@ -607,25 +724,331 @@
     "description": "Plain, fluffy boiled basmati rice",
     "price": 100,
     "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
-    "category": "Rice & Noodles",
+    "category": "Rice & Pulao",
     "rating": 4.3,
     "isAvailable": true
   },
   {
-    "name": "Singapuri Veg Noodles",
-    "description": "Stir-fried noodles with a touch of curry powder and sweet-spicy flavors",
+    "name": "Burnt Garlic Veg Fried Rice",
+    "description": "Wok-fried rice tossed intensely with fine-diced greens and deep bitter toasted garlic bits",
+    "price": 170,
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+    "category": "Rice & Pulao",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Kashmiri Sweet Pulao Rice",
+    "description": "Fluffy long-grain basmati rice pot-boiled inside sweet saffron milk, topped with walnuts and almonds",
     "price": 180,
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
-    "category": "Rice & Noodles",
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Rice & Pulao",
     "rating": 4.4,
-    "isAvailable": false
+    "isAvailable": true
+  },
+  {
+    "name": "Fiery Szechuan Prawns Fried Rice Wok",
+    "description": "Hot long-grain basmati fried rice tossed thoroughly with clean prawns and fiery homemade red chili garlic condiment",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+    "category": "Rice & Pulao",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Jeera Basmati Ghee Steamed Rice Bowl",
+    "description": "Long grain premium basmati rice pot-boiled fluffy and tempered clean inside pure cow ghee with high crackling cumin grains",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Rice & Pulao",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Wok Fried Chinese Burnt Garlic Chicken Rice Bowl",
+    "description": "Fluffy long grain fried rice tossed cleanly with bitter dark toasted garlic flakes, chicken breast pieces, and egg threads",
+    "price": 210,
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+    "category": "Rice & Pulao",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Garlic Sautéed Mushroom Swiss Burger",
+    "description": "Gourmet grilled patty topped with heavy quantities of butter-fried button mushroom wheels and white Swiss cheese sauce",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "category": "Burgers & Sandwiches",
+    "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "name": "Pesto Grilled Chicken Panini Sandwich",
+    "description": "Italian style hard-pressed panini sandwich filled internally with herbed chicken slices, basil pesto, and fresh mozzarella blocks",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1521390188846-e2a3a97453a0",
+    "category": "Burgers & Sandwiches",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Panko Fried Crunchy Fish Fillet Tartar Sauce Burger",
+    "description": "Golden crumbed river fish steak slice topped cleanly with sour cream tartar salad dressing inside soft slider bun rolls",
+    "price": 185,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "category": "Burgers & Sandwiches",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Classic Crunchy Veg Burger",
+    "description": "Hearty vegetable patty crisp fried, served inside toasted sesame buns with leaf lettuce and tomato cream mayo",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "category": "Burgers & Sandwiches",
+    "rating": 4.3,
+    "isAvailable": true
+  },
+  {
+    "name": "Grilled Cheese Corn Sandwich",
+    "description": "Crisp golden grilled sandwich overloaded with sweet american golden corn and stringy mozzarella melt",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1521390188846-e2a3a97453a0",
+    "category": "Burgers & Sandwiches",
+    "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "name": "Four Cheese Gourmet Pizza",
+    "description": "Loaded regular crust pizza topped with a premium blend of mozzarella, cheddar, gouda, and processed cheese cubes",
+    "price": 360,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    "category": "Pizzas & Pastas",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "BBQ Paneer Tikka Pizza",
+    "description": "An incredible fusion crust pizza loaded up with grilled sweet-smoky barbecue sauce coated paneer blocks",
+    "price": 310,
+    "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3",
+    "category": "Pizzas & Pastas",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Macaroni Cheese Baked",
+    "description": "Elbow pasta drowned completely inside a velvety cheddar cheese sauce, baked under breadcrumbs crust",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a",
+    "category": "Pizzas & Pastas",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Spaghetti Aglio Olio Chicken",
+    "description": "Long spaghetti pasta tossed in extra virgin olive oil, garlic slivers, chili flakes, and grilled chicken breast",
+    "price": 270,
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141",
+    "category": "Pizzas & Pastas",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Zucchini Broccoli Basil Leaf Gourmet Regular Pizza",
+    "description": "Thin crust Italian base layered with premium red tomato sauce, sliced fresh green zucchinis, broccoli, and extra mozzarella",
+    "price": 345,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    "category": "Pizzas & Pastas",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Penne Pasta in White Cheesy Garlic Cream Alfredo",
+    "description": "Long tubular macaroni pasta pieces tossed thoroughly inside a smooth reduction plate of hot buttery cheese garlic cream",
+    "price": 225,
+    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a",
+    "category": "Pizzas & Pastas",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Four Cheese Blend Mozzarella Cheddar Regular Crust Pizza",
+    "description": "Loaded regular pizza crust topped with premium slices of mozzarella, cheddar cheese, gouda blocks, and dense liquid cheddar",
+    "price": 365,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    "category": "Pizzas & Pastas",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Hakka Noodles",
+    "description": "Stir-fried noodles with crisp vegetables and Indo-Chinese condiments",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+    "category": "Chinese & Momos",
+    "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Hakka Noodles",
+    "description": "Stir-fried noodles tossed with chicken strips, egg, and mixed vegetables",
+    "price": 210,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+    "category": "Chinese & Momos",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Schezwan Chicken Noodles",
+    "description": "Spicy stir-fried noodles with chicken, coated in hot Schezwan sauce",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+    "category": "Chinese & Momos",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Pan Fried Schezwan Veg Momos (6 Pcs)",
+    "description": "Vegetable dumplings wok-fried flat on griddle before being coated inside hot red Szechuan chili paste",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9",
+    "category": "Chinese & Momos",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Pan Fried Chicken Crescent Gyoza (6 Pcs)",
+    "description": "Asiatic style flat-bottom potsticker dumplings filled internally with fine seasoned minced chicken paste and sesame oil drops",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9",
+    "category": "Chinese & Momos",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Steamed Momos Original (6 Pcs)",
+    "description": "Thin steamed dumpling skins containing soft minced chicken inner meatballs seasoned elegantly with light soy sesame essence",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9",
+    "category": "Chinese & Momos",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Veg Steamed Momos Original (6 Pcs)",
+    "description": "Himalayan street style flour wrappers packed cleanly with fine minced cabbage leaves, white onions, and ginger drops",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9",
+    "category": "Chinese & Momos",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Tikka",
+    "description": "Smoky clay-oven roasted boneless chicken marinated in yogurt and spices",
+    "price": 240,
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Paneer Tikka",
+    "description": "Grilled cottage cheese cubes marinated with spices and yogurt",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Tandoori Chicken Full",
+    "description": "Whole chicken marinated in tandoori masala and roasted to perfection",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Seekh Kebab",
+    "description": "Minced chicken seasoned with fresh herbs and grilled on skewers",
+    "price": 230,
+    "image": "https://images.unsplash.com/photo-1628102476695-814a35747607",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "Mutton Seekh Kebab",
+    "description": "Succulent minced mutton skewers roasted in charcoal tandoor",
+    "price": 310,
+    "image": "https://images.unsplash.com/photo-1628102476695-814a35747607",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.8,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Lollipop",
+    "description": "Deep-fried chicken wings coated in a spicy red batter",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.7,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken 65",
+    "description": "Spicy, deep-fried chicken bites tempered with curry leaves and green chillies",
+    "price": 230,
+    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.6,
+    "isAvailable": true
+  },
+  {
+    "name": "French Fries",
+    "description": "Classic golden crispy salted potato fries",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.4,
+    "isAvailable": true
+  },
+  {
+    "name": "Chicken Nuggets Golden Crumb Pack (8 Pcs)",
+    "description": "Bite-sized chunks of tender chicken breast seasoned inside out, breaded crisp and deep-fried blonde, served with red ketchup",
+    "price": 145,
+    "image": "https://images.unsplash.com/photo-1562967914-608f82629710",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.5,
+    "isAvailable": true
+  },
+  {
+    "name": "Panko Fried Crunchy Veg Fingers Log Plate (6 Pcs)",
+    "description": "Mixed minced vegetables rolled cleanly, deep fried until an extra blistered brown highly crunchy outer flaked shell skin",
+    "price": 115,
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.3,
+    "isAvailable": true
+  },
+  {
+    "name": "Dimer Devil Bengal Scotch Eggs (2 Pcs)",
+    "description": "Two hard-boiled farm eggs encased tightly inside an ultra-spicy minced potato wrapping, crumb-coated and crisp deep-fried",
+    "price": 85,
+    "image": "https://images.unsplash.com/photo-1541832676-9b763b0239ab",
+    "category": "Quick Snacks & Appetizers",
+    "rating": 4.4,
+    "isAvailable": true
   },
   {
     "name": "Gulab Jamun (2 Pcs)",
     "description": "Deep-fried milk solids dumplings soaked in warm sugar syrup",
     "price": 60,
     "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
-    "category": "Desserts",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -634,7 +1057,7 @@
     "description": "Soft cottage cheese flattened balls soaked in sweetened, thickened saffron milk",
     "price": 80,
     "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
-    "category": "Desserts",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.8,
     "isAvailable": true
   },
@@ -643,7 +1066,7 @@
     "description": "Rich and delicious golden halwa made from mung lentils, ghee, and nuts",
     "price": 90,
     "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
-    "category": "Desserts",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.7,
     "isAvailable": true
   },
@@ -652,26 +1075,8 @@
     "description": "Warm chocolate fudge brownie topped with a scoop of vanilla ice cream",
     "price": 150,
     "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e",
-    "category": "Desserts",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Vanilla Ice Cream",
-    "description": "Classic and creamy vanilla-flavored ice cream scoop",
-    "price": 50,
-    "image": "https://images.unsplash.com/photo-1560346337-a6868997d5d2",
-    "category": "Desserts",
-    "rating": 4.3,
-    "isAvailable": true
-  },
-  {
-    "name": "Chocolate Ice Cream",
-    "description": "Rich Belgian chocolate flavored ice cream scoop",
-    "price": 60,
-    "image": "https://images.unsplash.com/photo-1560346337-a6868997d5d2",
-    "category": "Desserts",
-    "rating": 4.4,
     "isAvailable": true
   },
   {
@@ -679,44 +1084,35 @@
     "description": "Seasonal fresh grated carrot pudding cooked with milk, khoya, and dry fruits",
     "price": 90,
     "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
-    "category": "Desserts",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.8,
     "isAvailable": false
-  },
-  {
-    "name": "Kulfi Falooda",
-    "description": "Traditional rich kulfi served with cornstarch noodles and rose syrup",
-    "price": 110,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
-    "category": "Desserts",
-    "rating": 4.6,
-    "isAvailable": true
   },
   {
     "name": "Choco Lava Cake",
     "description": "Decadent chocolate cake with a molten chocolate core",
     "price": 120,
     "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e",
-    "category": "Desserts",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.7,
     "isAvailable": true
   },
   {
-    "name": "Sizzling Brownie",
-    "description": "Brownie and vanilla ice cream served on a sizzling hot plate with chocolate syrup",
-    "price": 180,
-    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e",
-    "category": "Desserts",
+    "name": "Mishti Doi Red Earthen Claypot",
+    "description": "Traditional thick sweet Bengali baked yogurt fermented completely inside porous red clay pots with brown sugar",
+    "price": 65,
+    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
+    "category": "Sweet Treats & Desserts",
+    "rating": 4.9,
+    "isAvailable": true
+  },
+  {
+    "name": "Baked Rosogolla Cream Plate (2 Pcs)",
+    "description": "Spongy cottage cheese sweet balls dipped inside dense cardamoms rabri milk cream and oven-baked golden top",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39",
+    "category": "Sweet Treats & Desserts",
     "rating": 4.8,
-    "isAvailable": true
-  },
-  {
-    "name": "Masala Chai",
-    "description": "Brewed Indian milk tea infused with cardamom, ginger, and spices",
-    "price": 30,
-    "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3",
-    "category": "Beverages",
-    "rating": 4.7,
     "isAvailable": true
   },
   {
@@ -724,7 +1120,7 @@
     "description": "Thick and refreshing traditional churned sweet yogurt drink",
     "price": 70,
     "image": "https://images.unsplash.com/photo-1553787499-6f9133860278",
-    "category": "Beverages",
+    "category": "Chilled Beverages",
     "rating": 4.5,
     "isAvailable": true
   },
@@ -733,7 +1129,7 @@
     "description": "Creamy yogurt smoothie blended with sweet mango pulp",
     "price": 90,
     "image": "https://images.unsplash.com/photo-1553787499-6f9133860278",
-    "category": "Beverages",
+    "category": "Chilled Beverages",
     "rating": 4.6,
     "isAvailable": true
   },
@@ -742,17 +1138,8 @@
     "description": "Savory diluted yogurt drink spiced with roasted cumin and coriander",
     "price": 50,
     "image": "https://images.unsplash.com/photo-1553787499-6f9133860278",
-    "category": "Beverages",
+    "category": "Chilled Beverages",
     "rating": 4.3,
-    "isAvailable": true
-  },
-  {
-    "name": "Fresh Lime Soda",
-    "description": "Refreshing lime juice with your choice of sweet, salted, or mixed soda",
-    "price": 60,
-    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
-    "category": "Beverages",
-    "rating": 4.4,
     "isAvailable": true
   },
   {
@@ -760,7 +1147,7 @@
     "description": "Chilled blended milk, coffee, sugar, and vanilla ice cream",
     "price": 100,
     "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772",
-    "category": "Beverages",
+    "category": "Chilled Beverages",
     "rating": 4.6,
     "isAvailable": true
   },
@@ -769,26 +1156,8 @@
     "description": "Classic muddled drink with fresh mint, lime chunks, sugar syrup, and sprite",
     "price": 120,
     "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
-    "category": "Beverages",
+    "category": "Chilled Beverages",
     "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Mineral Water",
-    "description": "Packaged premium drinking water (1 Litre)",
-    "price": 30,
-    "image": "https://images.unsplash.com/photo-1608885898957-a599fb1ee4a4",
-    "category": "Beverages",
-    "rating": 4.2,
-    "isAvailable": true
-  },
-  {
-    "name": "Soft Drink (Can)",
-    "description": "Choice of Coke, Sprite, or Thums Up (330ml)",
-    "price": 40,
-    "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97",
-    "category": "Beverages",
-    "rating": 4.3,
     "isAvailable": true
   },
   {
@@ -796,107 +1165,53 @@
     "description": "Thick milkshake blended with vanilla ice cream and crunchy Oreo cookies",
     "price": 130,
     "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
-    "category": "Beverages",
+    "category": "Chilled Beverages",
     "rating": 4.6,
     "isAvailable": true
   },
   {
-    "name": "Chicken Clear Soup",
-    "description": "Light, nutritious clear broth with shredded chicken and mild herbs",
-    "price": 130,
-    "image": "https://images.unsplash.com/photo-1547592165-e1d17fed6005",
-    "category": "Soups",
-    "rating": 4.4,
+    "name": "Gondhoraj Lime Soda Sparkling Refresh",
+    "description": "Chilled carbonated premium soda water containing freshly hand-squeezed fragrant Kolkata Gondhoraj citric green lime extract",
+    "price": 75,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+    "category": "Chilled Beverages",
+    "rating": 4.8,
     "isAvailable": true
   },
   {
-    "name": "Veg Manchow Soup",
-    "description": "Spicy and tangy dark brown Chinese soup topped with crispy fried noodles",
-    "price": 120,
-    "image": "https://images.unsplash.com/photo-1547592165-e1d17fed6005",
-    "category": "Soups",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Chicken Hot & Sour Soup",
-    "description": "Fiery and sour soup with shredded chicken, bamboo shoots, and mushrooms",
+    "name": "Oreo Cookie Milkshake Cream Thick",
+    "description": "A heavy thick summary dairy blender drink containing three crushed black Oreo cookies, vanilla cream scoop, and sweet chocolate drizzle",
     "price": 140,
-    "image": "https://images.unsplash.com/photo-1547592165-e1d17fed6005",
-    "category": "Soups",
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
+    "category": "Chilled Beverages",
     "rating": 4.6,
     "isAvailable": true
   },
   {
-    "name": "Tomato Soup",
-    "description": "Creamy and rich slow-simmered plum tomato soup served with croutons",
-    "price": 110,
-    "image": "https://images.unsplash.com/photo-1547592165-e1d17fed6005",
-    "category": "Soups",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "Veg Sweet Corn Soup",
-    "description": "Comforting thick Chinese soup cooked with crushed sweet corn kernels",
-    "price": 120,
-    "image": "https://images.unsplash.com/photo-1547592165-e1d17fed6005",
-    "category": "Soups",
-    "rating": 4.3,
-    "isAvailable": true
-  },
-  {
-    "name": "Veg Spring Roll",
-    "description": "Crispy deep-fried golden wrappers stuffed with seasoned julienned vegetables",
-    "price": 150,
-    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
-    "category": "Starters",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "Chicken Spring Roll",
-    "description": "Crispy thin sheets rolled with a savory chicken and vegetable filling",
-    "price": 180,
-    "image": "https://images.unsplash.com/photo-1608039755401-742074f0548d",
-    "category": "Starters",
-    "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Honey Chilli Potato",
-    "description": "Crispy fried potato fingers tossed in a sweet, spicy, and sesame honey-glaze",
-    "price": 160,
-    "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027",
-    "category": "Starters",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Fish Tikka",
-    "description": "Chunks of fresh fish marinated in yogurt, carom seeds, spices, and skewered",
-    "price": 320,
-    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0",
-    "category": "Starters",
+    "name": "Masala Chai",
+    "description": "Brewed Indian milk tea infused with cardamom, ginger, and spices",
+    "price": 30,
+    "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3",
+    "category": "Hot Brews",
     "rating": 4.7,
     "isAvailable": true
   },
   {
-    "name": "Green Salad",
-    "description": "Freshly sliced garden cucumbers, tomatoes, carrots, onions, and green chillies",
-    "price": 60,
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999",
-    "category": "Accompaniments",
-    "rating": 4.1,
+    "name": "Espresso Shot",
+    "description": "Strong, rich concentrated shot of 100% Arabica coffee beans",
+    "price": 70,
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+    "category": "Hot Brews",
+    "rating": 4.2,
     "isAvailable": true
   },
   {
-    "name": "Boondi Raita",
-    "description": "Chilled salted yogurt mixed with crispy fried chickpea flour droplets",
-    "price": 70,
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
-    "category": "Accompaniments",
-    "rating": 4.3,
+    "name": "Cappuccino",
+    "description": "Classic espresso drink prepared with equal parts espresso, milk, and thick foam",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+    "category": "Hot Brews",
+    "rating": 4.5,
     "isAvailable": true
   }
 ]

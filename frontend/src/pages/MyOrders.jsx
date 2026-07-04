@@ -59,7 +59,7 @@ const MyOrders = () => {
                   {order.paymentMethod}
                 </p>
                 <p>
-                  <span className="font-medium">Total:</span> $.{" "}
+                  <span className="font-medium">Total:</span> ₹{""}
                   {order.totalAmount}
                 </p>
                 <p>

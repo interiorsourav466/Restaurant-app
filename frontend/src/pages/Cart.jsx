@@ -37,40 +37,47 @@ const Cart = () => {
           <thead className="bg-gray-100">
             <tr>
               <th className="py-3 px-4 text-left text-gray-700">Item</th>
-              <th className="py-3 px-4 text-left text-gray-700">Qty</th>
-              <th className="py-3 px-4 text-left text-gray-700">Price</th>
-              <th className="py-3 px-4 text-left text-gray-700">Total</th>
-              <th className="py-3 px-4 text-left text-gray-700">Action</th>
+              <th className="py-3 px-4 text-center text-gray-700">Qty</th>
+              <th className="py-3 px-4 text-center text-gray-700">Price</th>
+              <th className="py-3 px-4 text-center text-gray-700">Total</th>
+              <th className="py-3 px-4 text-center text-gray-700">Action</th>
             </tr>
           </thead>
 
           <tbody>
-            {cart.items.map((item) => (
-              <tr key={item._id} className="border-t hover:bg-gray-50">
-                <td className="py-3 px-4 flex items-center space-x-3">
-                  <img
-                    src={item.menuItem.image}
-                    alt={item.menuItem.name}
-                    className="w-12 h-12 rounded object-cover"
-                  />
-                  <span className="font-medium text-gray-800">
-                    {item.menuItem.name}
-                  </span>
-                </td>
-                <td className="py-3 px-4 text-center text-gray-700">
-                  {item.quantity}
-                </td>
-                <td className="py-3 px-4 text-center text-gray-700">
-                  ₹. {item.menuItem.price}
-                </td>
-                <td className="py-3 px-4 text-center text-gray-700 font-semibold">
-                  ₹. {item.menuItem.price * item.quantity}
-                </td>
-                <td className="py-3 px-4 text-center text-gray-700 font-semibold">
-                  <X onClick={() => removeFromCart(item.menuItem._id)} />
-                </td>
-              </tr>
-            ))}
+            {cart.items
+              .filter((item) => item.menuItem)
+              .map((item) => (
+                <tr key={item._id} className="border-t hover:bg-gray-50">
+                  <td className="py-3 px-4 flex items-center space-x-3">
+                    <img
+                      src={item.menuItem.image}
+                      alt={item.menuItem.name}
+                      className="w-12 h-12 rounded object-cover"
+                    />
+                    <span className="font-medium text-gray-800">
+                      {item.menuItem.name}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 text-center text-gray-700">
+                    {item.quantity}
+                  </td>
+                  <td className="py-3 px-4 text-center text-gray-700">
+                    ₹. {item.menuItem.price}
+                  </td>
+                  <td className="py-3 px-4 text-center text-gray-700 font-semibold">
+                    ₹. {item.menuItem.price * item.quantity}
+                  </td>
+                  <td className="py-3 px-4 text-center text-gray-700 font-semibold">
+                    <button
+                      onClick={() => removeFromCart(item.menuItem._id)}
+                      className="p-2 rounded-full hover:bg-red-100 transition cursor-pointer"
+                    >
+                      <X size={24} className="text-red-500" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
@@ -80,7 +87,7 @@ const Cart = () => {
         </h3>
         <button
           onClick={() => navigate("/checkout")}
-          className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition"
+          className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer"
         >
           Checkout
         </button>

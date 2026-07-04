@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { Search, X, Sparkles } from "lucide-react";
 import MenuCard from "../components/MenuCard";
+import { useSearchParams } from "react-router-dom";
 
 const Menu = () => {
   const { axios } = useContext(AppContext);
@@ -11,18 +12,24 @@ const Menu = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [totalItems, setTotalItems] = useState(0);
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get("category") || "";
+  const special = searchParams.get("special") || "";
   const fetchMenus = async () => {
     try {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/menu/all?search=${searchQuery}&page=${page}&limit=12`,
+        `/api/menu/all?search=${searchQuery}&category=${category}&special=${special}&page=${page}&limit=12`
       );
 
       if (data.success) {
         setFilteredMenus(data.menuItems || []);
 
         setTotalPages(data.totalPages || 1);
+
+        setTotalItems(data.totalMenus || 0);
       }
     } catch (error) {
       console.log(error);
@@ -37,8 +44,7 @@ const Menu = () => {
     }, 300);
 
     return () => clearTimeout(delayDebounce);
-  }, [searchQuery, page]);
-
+  }, [searchQuery, page, category]);
   const handleClearSearch = () => {
     setSearchQuery("");
   };
@@ -46,62 +52,64 @@ const Menu = () => {
   return (
     <section className="min-h-screen bg-[#fffaf5] overflow-hidden">
       {/* Hero Section */}
-      <div className="relative overflow-hidden py-28 px-6">
+      <div className="relative overflow-hidden pt-16 pb-10 px-6">
         {/* Background Blurs */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-orange-200/40 rounded-full blur-3xl"></div>
 
         <div className="absolute right-0 bottom-0 w-96 h-96 bg-orange-100 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          {/* Header */}
-          <div className="text-center mb-16">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-5 py-2 rounded-full font-semibold mb-6 shadow-sm">
+          {/* Hero */}
+
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-5 py-2 rounded-full font-semibold shadow-sm">
               <Sparkles size={18} />
-              Flavoro Premium Menu
+              Flavoro Signature Menu
             </div>
 
-            {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 leading-tight mb-8">
-              Explore Our
-              <span className="block bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
-                Signature Dishes
+            <h1 className="mt-6 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
+              Discover
+              <span className="text-orange-500">
+                {" "}
+                Authentic Indian Flavours
               </span>
             </h1>
 
-            {/* Description */}
-            <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Discover handcrafted Indian delicacies prepared with authentic
-              spices, premium ingredients, and unforgettable flavors.
+            <p className="mt-5 max-w-2xl mx-auto text-gray-600 text-base md:text-lg leading-8">
+              From spicy street food to rich royal curries, enjoy handcrafted
+              dishes made with authentic spices and fresh ingredients.
             </p>
           </div>
 
           {/* Search Box */}
-          <div className="max-w-3xl mx-auto mb-14">
-            <div className="relative bg-white rounded-full shadow-xl border border-orange-100 overflow-hidden">
-              <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-orange-400 w-6 h-6" />
+          <div className="max-w-3xl mx-auto mb-8">
+            <div className="relative bg-white rounded-2xl border border-orange-100 shadow-lg">
+              <Search
+                className="absolute left-5 top-1/2 -translate-y-1/2 text-orange-500"
+                size={22}
+              />
 
               <input
                 type="text"
-                placeholder="Search for your favorite dishes..."
+                placeholder="Search your favourite food..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-16 pr-16 py-5 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-lg"
+                className="w-full py-4 pl-14 pr-14 rounded-2xl outline-none text-lg"
               />
 
               {searchQuery && (
                 <button
                   onClick={handleClearSearch}
-                  className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 hover:text-orange-500 transition"
+                  className="absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="text-gray-500 hover:text-orange-500" />
                 </button>
               )}
             </div>
           </div>
 
           {/* Results */}
-          <div className="flex items-center justify-between flex-wrap gap-5 mb-14">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
             {/* Left */}
             <div>
               {searchQuery ? (
@@ -112,10 +120,7 @@ const Menu = () => {
 
                   <h2 className="text-3xl font-bold text-gray-900">
                     Found
-                    <span className="text-orange-500">
-                      {" "}
-                      {filteredMenus.length}
-                    </span>{" "}
+                    <span className="text-orange-500"> {totalItems}</span>{" "}
                     Results
                   </h2>
                 </div>
@@ -127,11 +132,7 @@ const Menu = () => {
 
                   <h2 className="text-3xl font-bold text-gray-900">
                     Total
-                    <span className="text-orange-500">
-                      {" "}
-                      {filteredMenus.length}
-                    </span>{" "}
-                    Items
+                    <span className="text-orange-500"> {totalItems}</span> Items
                   </h2>
                 </div>
               )}
@@ -142,7 +143,7 @@ const Menu = () => {
               <p className="text-gray-500 text-sm">Flavoro Collection</p>
 
               <h3 className="text-4xl font-extrabold text-orange-500">
-                {filteredMenus.length}
+                {totalItems}
               </h3>
             </div>
           </div>
@@ -173,11 +174,11 @@ const Menu = () => {
 
               {/* Pagination */}
 
-              <div className="flex justify-center gap-4 mt-14">
+              <div className="flex justify-center gap-4 mt-10">
                 <button
                   disabled={page === 1}
                   onClick={() => setPage(page - 1)}
-                  className="px-5 py-2 bg-orange-500 text-white rounded disabled:opacity-50"
+                  className="px-5 py-2 bg-orange-500 text-white rounded disabled:opacity-50 cursor-pointer"
                 >
                   Prev
                 </button>
@@ -189,7 +190,7 @@ const Menu = () => {
                 <button
                   disabled={page === totalPages}
                   onClick={() => setPage(page + 1)}
-                  className="px-5 py-2 bg-orange-500 text-white rounded disabled:opacity-50"
+                  className="px-5 py-2 bg-orange-500 text-white rounded disabled:opacity-50 cursor-pointer"
                 >
                   Next
                 </button>
@@ -213,7 +214,6 @@ const Menu = () => {
               </button>
             </div>
           )}
-         
         </div>
       </div>
     </section>

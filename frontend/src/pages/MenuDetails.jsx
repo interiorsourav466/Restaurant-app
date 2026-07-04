@@ -56,7 +56,7 @@ const MenuDetails = () => {
                   className="w-full h-[400px] object-cover"
                 />
                 {/* Availability Badge */}
-                <div className="absolute top-6 right-6">
+                <div className="absolute top-6 right-6"> 
                   {menu.isAvailable ? (
                     <div className="bg-green-500 text-white px-4 py-2 rounded-full flex items-center gap-2 font-semibold shadow-lg">
                       <CheckCircle className="w-5 h-5" />

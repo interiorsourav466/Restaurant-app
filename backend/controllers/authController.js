@@ -1,7 +1,7 @@
 import User from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-// Generate JWT
+
 const generateToken = (res, payload) => {
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1d" });
   res.cookie("token", token, {

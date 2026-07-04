@@ -34,14 +34,14 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-5">
           <button
             onClick={() => navigate("/menu")}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold cursor-pointer"
           >
             Explore Menu
           </button>
 
           <button
             onClick={() => navigate("/book-table")}
-            className="bg-white hover:bg-orange-50 text-gray-800 px-8 py-4 rounded-full font-semibold"
+            className="bg-white hover:bg-orange-50 text-gray-800 px-8 py-4 rounded-full font-semibold cursor-pointer"
           >
             Book Table
           </button>

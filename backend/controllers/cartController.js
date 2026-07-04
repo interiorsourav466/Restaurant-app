@@ -14,7 +14,7 @@ export const addToCart = async (req, res) => {
     }
 
     const existingItem = cart.items.find(
-      (item) => item.menuItem.toString() === menuId
+      (item) => item.menuItem.toString() === menuId,
     );
 
     if (existingItem) {
@@ -33,16 +33,34 @@ export const addToCart = async (req, res) => {
   }
 };
 
-// Get user cart
 export const getCart = async (req, res) => {
   try {
     const { id } = req.user;
-    const cart = await Cart.findOne({ user: id }).populate("items.menuItem");
-    if (!cart) return res.status(200).json({ items: [] });
-    res.status(200).json({ cart, success: true });
+
+    let cart = await Cart.findOne({ user: id }).populate("items.menuItem");
+
+    if (!cart) {
+      return res.status(200).json({
+        success: true,
+        cart: { items: [] },
+      });
+    }
+
+    // Remove deleted menu items
+    cart.items = cart.items.filter((item) => item.menuItem !== null);
+
+    await cart.save();
+
+    res.status(200).json({
+      success: true,
+      cart,
+    });
   } catch (error) {
     console.log(error);
-    return res.json({ message: "Internal server error", success: false });
+    res.json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 };
 
@@ -54,7 +72,7 @@ export const removeFromCart = async (req, res) => {
     const cart = await Cart.findOne({ user: id });
     if (!cart) return res.status(404).json({ message: "Cart not found" });
     cart.items = cart.items.filter(
-      (item) => item.menuItem._id.toString() !== menuId
+      (item) => item.menuItem && item.menuItem.toString() !== menuId,
     );
     await cart.save();
     res.status(200).json({ message: "Item removed from cart", success: true });
