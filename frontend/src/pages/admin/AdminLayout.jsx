@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import ProfileSection from "../../components/ProfileSection";
 const AdminLayout = () => {
   const { user, setAdmin, axios, setUser } = useContext(AppContext);
 
@@ -147,10 +148,24 @@ const AdminLayout = () => {
               </div>
             </div>
           </div>
-          <div />
+
+          {/* Profile */}
+          <div className="px-4 pb-4">
+            <ProfileSection
+              user={user}
+              onSave={(updated) => {
+                // No backend profile update route in current code.
+                // Keeping UI-only edit for now.
+                // If you add /api/auth/update-profile later, wire it here.
+                toast.success("Profile edited (UI only)");
+              }}
+            />
+          </div>
+
           <div />
         </div>
       </div>
+
       {/* Mobile overlay */}
 
       {sidebarOpen && (
