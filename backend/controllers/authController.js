@@ -4,10 +4,12 @@ import bcrypt from "bcryptjs";
 
 const generateToken = (res, payload) => {
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1d" });
+  const isProd = process.env.NODE_ENV === "production";
+
   res.cookie("token", token, {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
     maxAge: 24 * 60 * 60 * 1000,
   });
   return token;
@@ -132,7 +134,12 @@ export const loginUser = async (req, res) => {
 
 export const logoutUser = async (req, res) => {
   try {
-    res.clearCookie("token");
+    const isProd = process.env.NODE_ENV === "production";
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: isProd,
+      sameSite: isProd ? "none" : "lax",
+    });
     return res.json({ message: "User logged out successfully", success: true });
   } catch (error) {
     console.log(error.message);

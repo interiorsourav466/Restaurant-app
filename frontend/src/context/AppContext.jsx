@@ -5,7 +5,11 @@ import { toast } from "react-hot-toast";
 
 export const AppContext = createContext();
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || "http://localhost:5000";
+const apiBaseUrl =
+  import.meta.env.VITE_BASE_URL ||
+  (import.meta.env.PROD ? "/api" : "http://localhost:5000");
+
+axios.defaults.baseURL = apiBaseUrl;
 axios.defaults.withCredentials = true;
 
 const getStoredAdmin = () => {

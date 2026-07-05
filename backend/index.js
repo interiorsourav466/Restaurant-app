@@ -28,6 +28,14 @@ const envOrigins = (process.env.CORS_ORIGIN || "")
   .filter(Boolean);
 
 const corsOrigins = [...new Set([...allowedOrigins, ...envOrigins])];
+
+const isAllowedOrigin = (origin) => {
+  if (!origin) return true;
+
+  if (corsOrigins.includes(origin)) return true;
+
+  return /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin);
+};
 // database connection
 connectDB();
 connectCloudinary();
@@ -36,7 +44,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || corsOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin)) {
         callback(null, true);
         return;
       }
