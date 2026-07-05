@@ -5,14 +5,21 @@ import { toast } from "react-hot-toast";
 
 export const AppContext = createContext();
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || "http://localhost:5000";
 axios.defaults.withCredentials = true;
+
+const getStoredAdmin = () => {
+  if (typeof window === "undefined") return null;
+
+  const storedAdmin = localStorage.getItem("admin");
+  return storedAdmin ? JSON.parse(storedAdmin) : null;
+};
 
 const AppContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
-  const [admin, setAdmin] = useState(null);
+  const [admin, setAdminState] = useState(getStoredAdmin);
   const [categories, setCategories] = useState([]);
   const [menus, setMenus] = useState([]);
   const [cart, setCart] = useState([]);
@@ -54,6 +61,18 @@ const AppContextProvider = ({ children }) => {
       setTotalPrice(total);
     }
   }, [cart]);
+
+  const setAdmin = (value) => {
+    setAdminState(value);
+
+    if (typeof window !== "undefined") {
+      if (value) {
+        localStorage.setItem("admin", JSON.stringify(value));
+      } else {
+        localStorage.removeItem("admin");
+      }
+    }
+  };
 
   const cartCount =
     cart?.items?.reduce((acc, item) => {
@@ -113,9 +132,20 @@ const AppContextProvider = ({ children }) => {
 
       if (data.success) {
         setUser(data.user);
+
+        if (data.user?.role === "admin") {
+          setAdmin(data.user);
+        } else {
+          setAdmin(null);
+        }
+      } else {
+        setUser(null);
+        setAdmin(null);
       }
     } catch (error) {
       console.log(error);
+      setUser(null);
+      setAdmin(null);
     }
   };
 

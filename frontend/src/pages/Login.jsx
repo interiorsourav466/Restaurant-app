@@ -4,7 +4,7 @@ import { LockIcon, MailIcon, User2Icon } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { AppContext } from "../context/AppContext";
 const Login = () => {
-  const { navigate, loading, setLoading, axios, setUser } =
+  const { navigate, loading, setLoading, axios, setUser, setAdmin } =
     useContext(AppContext);
   // state for input value
   const [formData, setFormData] = useState({
@@ -27,6 +27,7 @@ const Login = () => {
 
       if (data.success) {
         setUser(data.user);
+        setAdmin(null);
 
         toast.success(data.message);
 
@@ -39,7 +40,7 @@ const Login = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Something went wrong");
     } finally {
       setLoading(false);
     }

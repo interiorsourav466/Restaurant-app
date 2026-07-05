@@ -25,15 +25,14 @@ const AdminLogin = () => {
       const { data } = await axios.post("/api/auth/admin/login", formData);
 
       if (data.success) {
-        localStorage.setItem("admin", JSON.stringify(data.admin));
-        setAdmin(true);
+        setAdmin(data.admin);
         toast.success(data.message);
         navigate("/admin");
       } else {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Something went wrong");
     } finally {
       setLoading(false);
     }

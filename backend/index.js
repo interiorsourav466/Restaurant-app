@@ -12,6 +12,22 @@ import dotenv from "dotenv";
 import connectCloudinary from "./config/cloudinary.js";
 dotenv.config();
 const app = express();
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "http://localhost:5174",
+  "http://127.0.0.1:5174",
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+];
+
+const envOrigins = (process.env.CORS_ORIGIN || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+const corsOrigins = [...new Set([...allowedOrigins, ...envOrigins])];
 // database connection
 connectDB();
 connectCloudinary();
@@ -19,7 +35,14 @@ connectCloudinary();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin || corsOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(null, false);
+    },
     credentials: true,
   })
 );

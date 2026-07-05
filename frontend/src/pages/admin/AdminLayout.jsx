@@ -13,7 +13,7 @@ import {
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { toast } from "react-hot-toast";
 const AdminLayout = () => {
-  const { setAdmin, axios } = useContext(AppContext);
+  const { setAdmin, axios, setUser } = useContext(AppContext);
 
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -68,6 +68,7 @@ const AdminLayout = () => {
       const { data } = await axios.post("/api/auth/logout");
       if (data.success) {
         toast.success(data.message);
+        setUser(null);
         setAdmin(null);
       } else {
         toast.error(data.message);
