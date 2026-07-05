@@ -7,7 +7,7 @@ export const AppContext = createContext();
 
 const apiBaseUrl =
   import.meta.env.VITE_BASE_URL?.trim() ||
-  (import.meta.env.PROD ? "/api" : "http://localhost:5000");
+  (import.meta.env.PROD ? "" : "http://localhost:5000");
 
 axios.defaults.baseURL = apiBaseUrl;
 axios.defaults.withCredentials = true;
