@@ -13,7 +13,7 @@ import {
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { toast } from "react-hot-toast";
 const AdminLayout = () => {
-  const { setAdmin, axios, setUser } = useContext(AppContext);
+  const { user, setAdmin, axios, setUser } = useContext(AppContext);
 
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -134,10 +134,16 @@ const AdminLayout = () => {
           {/* Footer */}
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center text-sm text-gray-500">
-              <div className="w-8 h-8 bg-gray-300 rounded-full mr-3"></div>
+              <div className="w-8 h-8 bg-gray-300 rounded-full mr-3 flex items-center justify-center">
+                <span className="font-semibold text-gray-700">
+                  {(user?.name?.[0] || user?.email?.[0] || "A").toUpperCase()}
+                </span>
+              </div>
               <div>
-                <div className="font-medium text-gray-900"> Admin User</div>
-                <div>admin@example.com</div>
+                <div className="font-medium text-gray-900">
+                  {user?.role === "admin" ? "Admin" : "User"} User
+                </div>
+                <div>{user?.email || ""}</div>
               </div>
             </div>
           </div>
