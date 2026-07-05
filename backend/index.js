@@ -20,6 +20,8 @@ const allowedOrigins = [
   "http://127.0.0.1:5174",
   "http://localhost:3000",
   "http://127.0.0.1:3000",
+  // Vercel frontend (update if you use a custom domain)
+  "https://restaurant-app-rho-six.vercel.app",
 ];
 
 const envOrigins = (process.env.CORS_ORIGIN || "")
@@ -34,6 +36,7 @@ const isAllowedOrigin = (origin) => {
 
   if (corsOrigins.includes(origin)) return true;
 
+  // In case you deploy to another *.vercel.app hostname
   return /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin);
 };
 // database connection
