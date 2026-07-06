@@ -10,13 +10,14 @@ import {
   X,
   Menu,
 } from "lucide-react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import ProfileSection from "../../components/ProfileSection";
 const AdminLayout = () => {
   const { user, setAdmin, axios, setUser } = useContext(AppContext);
 
   const location = useLocation();
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const menuItems = [
     {
@@ -135,19 +136,39 @@ const AdminLayout = () => {
           {/* Footer */}
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center text-sm text-gray-500">
-              <div className="w-8 h-8 bg-gray-300 rounded-full mr-3 flex items-center justify-center">
-                <span className="font-semibold text-gray-700">
-                  {(user?.name?.[0] || user?.email?.[0] || "A").toUpperCase()}
-                </span>
+              <div className="w-8 h-8 bg-gray-300 rounded-full mr-3 flex items-center justify-center overflow-hidden">
+                {user?.profilePhoto ? (
+                  <img
+                    src={user.profilePhoto}
+                    alt="profile"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="font-semibold text-gray-700">
+                    {(user?.name?.[0] || user?.email?.[0] || "A").toUpperCase()}
+                  </span>
+                )}
               </div>
               <div>
                 <div className="font-medium text-gray-900">
-                  {user?.role === "admin" ? "Admin" : "User"} User
+                  {user?.role === "admin" ? "Admin" : "User"} 
                 </div>
                 <div>{user?.email || ""}</div>
               </div>
             </div>
           </div>
+
+          {/* User login link option */}
+          <div className="px-4 pb-6">
+            <button
+              onClick={() => navigate("/login")}
+              className="w-full mt-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition cursor-pointer"
+              type="button"
+            >
+              User Login
+            </button>
+          </div>
+
 
           {/* Profile */}
           <div className="px-4 pb-4">

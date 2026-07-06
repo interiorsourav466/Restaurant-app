@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
+import toast from "react-hot-toast";
 
 const ProfileSection = ({ user, onSave }) => {
+  const { axios, setUser } = useContext(AppContext);
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({
     name: user?.name || "",
@@ -10,11 +13,58 @@ const ProfileSection = ({ user, onSave }) => {
 
   const initials = (user?.name?.[0] || user?.email?.[0] || "A").toUpperCase();
 
+  const handleSave = async () => {
+    try {
+      const res = await axios.put("/api/auth/profile", form);
+      if (res.data?.success) {
+        toast.success("Profile updated");
+        // Refresh user from backend
+        const prof = await axios.get("/api/auth/profile");
+        if (prof.data?.role) {
+          setUser(prof.data);
+        }
+        setOpen(false);
+        onSave?.(form);
+      } else {
+        toast.error(res.data?.message || "Failed to update profile");
+      }
+    } catch (e) {
+      toast.error(e.response?.data?.message || "Something went wrong");
+    }
+  };
+
+  const handlePhotoChange = async (file) => {
+    try {
+      const fd = new FormData();
+      fd.append("photo", file);
+      const res = await axios.post("/api/auth/profile-photo", fd, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      if (res.data?.success) {
+        toast.success("Profile photo updated");
+        const prof = await axios.get("/api/auth/profile");
+        setUser(prof.data);
+      } else {
+        toast.error(res.data?.message || "Failed to update photo");
+      }
+    } catch (e) {
+      toast.error(e.response?.data?.message || "Something went wrong");
+    }
+  };
+
   return (
     <div className="p-4 bg-white border border-gray-200 rounded-2xl shadow-sm">
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
-          <span className="font-semibold text-gray-700">{initials}</span>
+        <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden">
+          {user?.profilePhoto ? (
+            <img
+              src={user.profilePhoto}
+              alt="profile"
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <span className="font-semibold text-gray-700">{initials}</span>
+          )}
         </div>
 
         <div className="flex-1">
@@ -35,6 +85,19 @@ const ProfileSection = ({ user, onSave }) => {
 
       {open && (
         <div className="mt-4 space-y-3">
+          <div className="flex items-center gap-3">
+            <label className="text-sm text-gray-700 font-medium">
+              Profile Photo
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => {
+                if (e.target.files?.[0]) handlePhotoChange(e.target.files[0]);
+              }}
+            />
+          </div>
+
           <div>
             <label className="block text-sm text-gray-700 mb-1">Name</label>
             <input
@@ -85,12 +148,7 @@ const ProfileSection = ({ user, onSave }) => {
             </button>
             <button
               className="flex-1 px-3 py-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium"
-              onClick={() => {
-                // No backend edit route in your current code.
-                // Keep UI ready; onSave can be wired later.
-                onSave?.(form);
-                setOpen(false);
-              }}
+              onClick={handleSave}
             >
               Save
             </button>
@@ -102,4 +160,5 @@ const ProfileSection = ({ user, onSave }) => {
 };
 
 export default ProfileSection;
+
 
