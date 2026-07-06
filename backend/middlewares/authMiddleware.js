@@ -1,36 +1,35 @@
 import jwt from "jsonwebtoken";
 
-export const protect = async (req, res, next) => {
+export const protect = (req,res,next)=>{
 
-  const token = req.cookies.token;
+ const token = req.cookies.token;
 
-  if (!token) {
-    return res.status(401).json({
-      success: false,
-      message: "Not Authorized",
-    });
-  }
+ if(!token){
+   return res.status(401).json({
+     success:false,
+     message:"Please login to continue"
+   })
+ }
 
-  try {
+ try{
 
-    const decoded = jwt.verify(
-      token,
-      process.env.JWT_SECRET
-    );
+   const decoded = jwt.verify(
+     token,
+     process.env.JWT_SECRET
+   );
 
-    req.user = decoded;
+   req.user = decoded;
 
-    next();
+   next();
 
-  } catch (error) {
+ }catch(error){
 
-    return res.status(401).json({
-      success: false,
-      message: "Invalid Token",
-    });
+   return res.status(401).json({
+     success:false,
+     message:"Session expired, please login again"
+   })
 
-  }
-
+ }
 };
 
 export const adminOnly = async (req, res, next) => {
