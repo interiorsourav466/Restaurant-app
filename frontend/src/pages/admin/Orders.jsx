@@ -76,7 +76,17 @@ const Orders = () => {
               <div className="p-4 font-semibold">{order.user?.name}</div>
 
               <div className="p-4 text-sm leading-6 break-words">
-                {order.address}
+                <p className="font-semibold">{order.address?.name}</p>
+
+                <p>{order.address?.phone}</p>
+
+                <p>{order.address?.street}</p>
+
+                <p>
+                  {order.address?.city}, {order.address?.state}
+                </p>
+
+                <p>{order.address?.pincode}</p>
               </div>
 
               <div className="p-4 font-semibold text-green-600">
@@ -105,28 +115,33 @@ const Orders = () => {
 
             <div className="border-t p-4">
               <div className="grid md:grid-cols-2 gap-4">
-                {order.items.map((item) => (
-                  <div
-                    key={item._id}
-                    className="flex gap-4 border rounded-lg p-3 bg-gray-50"
-                  >
-                    <img
-                      src={item.menuItem?.image}
-                      alt={item.menuItem?.name}
-                      className="w-20 h-20 rounded-lg object-cover"
-                    />
+                {order.items
+                  ?.filter((item) => item.menuItem)
+                  .map((item) => (
+                    <div
+                      key={item._id}
+                      className="flex gap-4 border rounded-lg p-3 bg-gray-50"
+                    >
+                      <img
+                        src={
+                          item.menuItem?.image ||
+                          "https://via.placeholder.com/80"
+                        }
+                        alt={item.menuItem?.name}
+                        className="w-20 h-20 rounded-lg object-cover"
+                      />
 
-                    <div>
-                      <h3 className="font-semibold">{item.menuItem?.name}</h3>
+                      <div>
+                        <h3 className="font-semibold">{item.menuItem?.name}</h3>
 
-                      <p className="text-gray-500">Qty : {item.quantity}</p>
+                        <p className="text-gray-500">Qty : {item.quantity}</p>
 
-                      <p className="text-orange-600 font-semibold">
-                        ₹ {item.menuItem?.price}
-                      </p>
+                        <p className="text-orange-600 font-semibold">
+                          ₹ {item.menuItem?.price}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>

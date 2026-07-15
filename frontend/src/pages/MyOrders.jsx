@@ -3,11 +3,13 @@ import { AppContext } from "../context/AppContext";
 
 const MyOrders = () => {
   const { axios } = useContext(AppContext);
+
   const [orders, setOrders] = useState([]);
 
   const fetchMyOrders = async () => {
     try {
       const { data } = await axios.get("/api/order/my-orders");
+
       if (data.success) {
         setOrders(data.orders);
       }
@@ -15,65 +17,101 @@ const MyOrders = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     fetchMyOrders();
   }, []);
+
   return (
     <div className="max-w-5xl mx-auto mt-10 p-6">
-      <h2 className="text-2xl font-semibold mb-6 text-center">My Orders</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center">My Orders</h2>
+
       {orders.length === 0 ? (
         <p className="text-center text-gray-600">You have no orders yet</p>
       ) : (
-        <div>
+        <div className="space-y-6">
           {orders.map((order) => (
             <div
               key={order._id}
-              className="bg-white shadow-md rounded-2xl p-5 border border-gray-100 hover:shadow-lg transition"
+              className="bg-white shadow-lg rounded-2xl p-6 border"
             >
-              <div className="flex justify-between items-center mb-3">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Order ID:
-                  <span className="text-green-600">{order._id.slice(-6)}</span>
+              {/* TOP */}
+
+              <div className="flex justify-between mb-5">
+                <h3 className="font-bold">
+                  Order ID :
+                  <span className="text-orange-500 ml-2">
+                    {order._id.slice(-6)}
+                  </span>
                 </h3>
-                <span
-                  className={`px-3 py-1 text-sm rounded-full ${
-                    order.status === "Pending"
-                      ? "bg-yellow-100 text-yellow-700"
-                      : order.status === "Preparing"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-red-100 text-green-700"
-                  }`}
-                >
+
+                <span className="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full">
                   {order.status}
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
+              {/* ITEMS */}
+
+              <div className="space-y-3">
+                {order.items
+                  .filter((item) => item.menuItem)
+                  .map((item) => (
+                    <div
+                      key={item._id}
+                      className="flex items-center gap-4 border rounded-xl p-3"
+                    >
+                      <img
+                        src={item.menuItem.image}
+                        alt={item.menuItem.name}
+                        className="w-20 h-20 rounded-xl object-cover"
+                      />
+
+                      <div className="flex-1">
+                        <h3 className="font-bold">{item.menuItem.name}</h3>
+
+                        <p>Qty : {item.quantity}</p>
+
+                        <p className="text-orange-500 font-semibold">
+                          ₹{item.menuItem.price}
+                        </p>
+                      </div>
+
+                      <p className="font-bold">
+                        ₹{item.menuItem.price * item.quantity}
+                      </p>
+                    </div>
+                  ))}
+              </div>
+
+              {/* ADDRESS */}
+
+              <div className="mt-5 bg-gray-50 p-4 rounded-xl">
+                <h3 className="font-bold mb-2">Delivery Address</h3>
+
+                <p>{order.address.name}</p>
+
+                <p>{order.address.phone}</p>
+
                 <p>
-                  {" "}
-                  <span className="font-medium">Address: </span>
-                  {order.address}{" "}
+                  {order.address.street},{order.address.city}
                 </p>
+
                 <p>
-                  <span className="font-medium">Payment:</span>{" "}
-                  {order.paymentMethod}
-                </p>
-                <p>
-                  <span className="font-medium">Total:</span> ₹{""}
-                  {order.totalAmount}
-                </p>
-                <p>
-                  <span className="font-medium">Date:</span>{" "}
-                  {new Date(order.createdAt).toLocaleDateString()}
+                  {order.address.state} - {order.address.pincode}
                 </p>
               </div>
 
-              <div className="mt-4">
-                <p className="text-gray-600 text-sm">
-                  <span className="font-medium">Items:</span>
-                  {order.items.length} product(s)
-                </p>
+              <div className="mt-5 flex justify-between">
+                <p>Payment : {order.paymentMethod}</p>
+
+                <h2 className="text-xl font-bold text-orange-500">
+                  ₹{order.totalAmount}
+                </h2>
               </div>
+
+              <p className="text-sm text-gray-500 mt-3">
+                Date : {new Date(order.createdAt).toLocaleDateString()}
+              </p>
             </div>
           ))}
         </div>
@@ -81,4 +119,5 @@ const MyOrders = () => {
     </div>
   );
 };
+
 export default MyOrders;

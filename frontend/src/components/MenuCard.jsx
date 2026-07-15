@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { ShoppingCart, Star } from "lucide-react";
+import { ShoppingCart, Star, Plus, Minus } from "lucide-react";
 
 const MenuCard = ({ menu }) => {
-  const { navigate, addToCart } = useContext(AppContext);
+  const { navigate, addToCart, cart, removeFromCart } = useContext(AppContext);
+
+  const cartItem = cart?.items?.find((item) => item.menuItem?._id === menu._id);
 
   return (
-    <div className="bg-white rounded-[30px] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group border border-orange-100">
-      {/* Image */}
+    <div className="bg-white rounded-[30px] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group border border-orange-100 flex flex-col h-full">
       <div
         onClick={() => navigate(`/menu-details/${menu._id}`)}
         className="relative h-64 overflow-hidden cursor-pointer"
@@ -18,46 +19,27 @@ const MenuCard = ({ menu }) => {
           className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
 
-        {/* Rating */}
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+        <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full flex items-center gap-1">
           <Star size={16} className="text-orange-500 fill-orange-500" />
 
-          <span className="text-sm font-semibold text-gray-800">
-            {menu.rating}
-          </span>
+          <span>{menu.rating}</span>
         </div>
-
-        {/* Availability */}
-        {!menu.isAvailable && (
-          <div className="absolute top-4 right-4 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Unavailable
-          </div>
-        )}
       </div>
 
-      {/* Content */}
-      <div className="p-6">
-        {/* Category */}
-        <p className="text-orange-500 text-sm font-semibold uppercase tracking-wide mb-2">
-          {menu.category?.name || "Chef's Choice"}
+      <div className="p-6 flex flex-col flex-1">
+        <p className="text-orange-500 text-sm font-semibold uppercase mb-2">
+          {menu.category?.name}
         </p>
 
-        {/* Name */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-1">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-2 min-h-[65px]">
           {menu.name}
         </h3>
 
-        {/* Description */}
-        <p className="text-gray-600 leading-relaxed text-sm line-clamp-2 min-h-[45px]">
-          {menu.description}
-        </p>
+       <p className="text-gray-600 text-sm line-clamp-2 min-h-[45px]">{menu.description}</p>
 
-        {/* Bottom */}
-        <div className="flex items-center justify-between mt-6">
-          {/* Price */}
+     <div className="flex items-center justify-between mt-auto pt-6">
           <div>
             <p className="text-gray-500 text-sm">Starting From</p>
 
@@ -66,19 +48,33 @@ const MenuCard = ({ menu }) => {
             </h2>
           </div>
 
-          {/* Button */}
-          <button
-            onClick={() => addToCart(menu._id)}
-            disabled={!menu.isAvailable}
-            className={`flex items-center gap-2 px-5 py-3 rounded-full font-semibold transition-all duration-300 ${
-              menu.isAvailable
-                ? "bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:scale-105 cursor-pointer"
-                : "bg-gray-300 text-gray-500 cursor-not-allowed"
-            }`}
-          >
-            <ShoppingCart size={18} />
-            Add
-          </button>
+          {cartItem ? (
+            <div className="flex items-center gap-3 bg-orange-500 text-white px-4 py-3 rounded-full">
+              <button
+                onClick={() => removeFromCart(menu._id)}
+                className="cursor-pointer hover:scale-125 transition"
+              >
+                <Minus size={16} />
+              </button>
+
+              <span className="font-bold">{cartItem.quantity}</span>
+
+              <button
+                onClick={() => addToCart(menu._id)}
+                className="cursor-pointer hover:scale-125 transition"
+              >
+                <Plus size={16} />
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => addToCart(menu._id)}
+              className="flex items-center gap-2 px-5 py-3 rounded-full bg-orange-500 text-white shadow-lg cursor-pointer"
+            >
+              <ShoppingCart size={18} />
+              Add
+            </button>
+          )}
         </div>
       </div>
     </div>

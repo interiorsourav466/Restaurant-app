@@ -80,10 +80,21 @@ const AdminLogin = () => {
 
         <button
           type="submit"
-          className="mt-2 w-full h-11 rounded-full text-white bg-orange-500 hover:opacity-90 transition-opacity cursor-pointer"
+          className="mt-2 w-full h-11 rounded-full text-white bg-orange-500 hover:bg-orange-600 transition cursor-pointer"
         >
-          {loading ? "Loading..." : "Login"}
+          {loading ? "Loading..." : "Admin Login"}
         </button>
+
+        <div className="mt-6 text-sm text-gray-600 text-center">
+          <span>Are you a customer? </span>
+
+          <Link
+            to="/login"
+            className="text-orange-500 font-semibold hover:text-orange-600 hover:underline"
+          >
+            User Login
+          </Link>
+        </div>
       </form>
     </div>
   );

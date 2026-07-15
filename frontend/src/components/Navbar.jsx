@@ -7,8 +7,8 @@ import {
   Menu,
   Package,
   ShoppingCart,
-  UserCircle,
   X,
+  User,
 } from "lucide-react";
 import toast from "react-hot-toast";
 
@@ -131,15 +131,26 @@ const Navbar = () => {
                   onMouseEnter={() => setIsProfileOpen(true)}
                   onMouseLeave={() => setIsProfileOpen(false)}
                 >
-                  <button className="p-2 rounded-full">
-                    <UserCircle
-                      size={32}
-                      className="text-orange-500 cursor-pointer"
+                  <button className="p-1 rounded-full">
+                    <img
+                      src={
+                        user?.profilePhoto ||
+                        "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                      }
+                      className=" w-10 h-10 rounded-full object-cover border-2 border-orange-500 cursor-pointer "
                     />
                   </button>
 
                   {isProfileOpen && (
                     <div className="absolute right-0 w-56 bg-white border border-orange-100 rounded-2xl shadow-xl py-2 overflow-hidden">
+                      <Link
+                        to="/profile"
+                        className="flex items-center gap-3 px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-200"
+                      >
+                        <User size={18} />
+
+                        <span>My Profile</span>
+                      </Link>
                       <Link
                         to="/my-bookings"
                         className="flex items-center gap-3 px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-200"

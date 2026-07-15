@@ -78,9 +78,11 @@ export const adminLogin = async (req, res) => {
       success: true,
       message: "Admin login successful",
       admin: {
+        _id: admin._id,
         name: admin.name,
         email: admin.email,
         role: admin.role,
+        profilePhoto: admin.profilePhoto,
       },
     });
   } catch (error) {
@@ -120,10 +122,13 @@ export const loginUser = async (req, res) => {
     res.json({
       message: "User logged in successfully",
       success: true,
+
       user: {
+        _id: user._id,
         name: user.name,
         email: user.email,
         role: user.role,
+        profilePhoto: user.profilePhoto,
       },
     });
   } catch (error) {
@@ -150,14 +155,18 @@ export const logoutUser = async (req, res) => {
 export const getProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
-    if (!user) {
-      return res
-        .status(404)
-        .json({ message: "User not found", success: false });
-    }
-    res.json(user);
+
+    return res.json({
+      success: true,
+
+      user,
+    });
   } catch (error) {
-    return res.json({ message: "Internal server error", success: false });
+    return res.json({
+      success: false,
+
+      message: "Internal server error",
+    });
   }
 };
 

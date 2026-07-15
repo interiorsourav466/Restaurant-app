@@ -34,25 +34,25 @@ const AppContextProvider = ({ children }) => {
   const [categoryPage, setCategoryPage] = useState(1);
   const [categoryTotalPages, setCategoryTotalPages] = useState(1);
 
- const fetchCategories = async (page = 1) => {
-  try {
-    setCategoryLoading(true);
+  const fetchCategories = async (page = 1) => {
+    try {
+      setCategoryLoading(true);
 
-    const { data } = await axios.get(
-      `/api/category/all?page=${page}&limit=10`
-    );
+      const { data } = await axios.get(
+        `/api/category/all?page=${page}&limit=10`,
+      );
 
-    if (data.success) {
-      setCategories(data.categories);
-      setCategoryPage(data.currentPage);
-      setCategoryTotalPages(data.totalPages);
+      if (data.success) {
+        setCategories(data.categories);
+        setCategoryPage(data.currentPage);
+        setCategoryTotalPages(data.totalPages);
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setCategoryLoading(false);
     }
-  } catch (error) {
-    console.log(error);
-  } finally {
-    setCategoryLoading(false);
-  }
-};
+  };
 
   useEffect(() => {
     if (cart?.items) {
@@ -94,13 +94,36 @@ const AppContextProvider = ({ children }) => {
 
       if (data.success) {
         toast.success(data.message);
-
         fetchCartData();
-      } else {
-        toast.error(data.message);
       }
     } catch (error) {
       console.log(error);
+
+      if (error.response?.status === 401) {
+        toast.error(error.response.data.message);
+
+        navigate("/login");
+
+        return;
+      }
+
+      toast.error(error.response?.data?.message || "Something went wrong");
+    }
+  };
+  const removeFromCart = async (menuId) => {
+    try {
+      const { data } = await axios.delete(`/api/cart/remove/${menuId}`);
+
+      if (data.success) {
+        toast.success(data.message);
+        fetchCartData();
+      }
+    } catch (error) {
+      if (error.response?.status === 401) {
+        toast.error("Please login first");
+        navigate("/login");
+        return;
+      }
 
       toast.error("Something went wrong");
     }
@@ -187,14 +210,15 @@ const AppContextProvider = ({ children }) => {
     menuTotalPages,
 
     addToCart,
+    removeFromCart,
     cart,
     cartCount,
     totalPrice,
     fetchCartData,
     categoryLoading,
     categoryPage,
-categoryTotalPages,
-setCategoryPage,
+    categoryTotalPages,
+    setCategoryPage,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
