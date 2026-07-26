@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#1f2937] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-2 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
           {/* Brand */}
           <div>
@@ -87,7 +87,7 @@ export default function Footer() {
             <div className="space-y-4 text-gray-300">
               <p>Park Street, Kolkata, India</p>
 
-              <p>+91 98765 43210</p>
+              <p>+91 7718625824</p>
 
               <p>support@flavoro.com</p>
             </div>
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+        <div className="border-t border-white/10 mt-10 pt-4 text-center text-gray-400 mb-[-25px]">
           © 2026 Flavoro Restaurant. All rights reserved.
         </div>
       </div>

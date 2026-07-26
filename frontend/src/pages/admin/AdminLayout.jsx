@@ -158,17 +158,6 @@ const AdminLayout = () => {
             </div>
           </div>
 
-          {/* User login link option */}
-          <div className="px-4 pb-6">
-            <button
-              onClick={() => navigate("/login")}
-              className="w-full mt-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium transition cursor-pointer"
-              type="button"
-            >
-              User Login
-            </button>
-          </div>
-
 
           {/* Profile */}
           <div className="px-4 pb-4">

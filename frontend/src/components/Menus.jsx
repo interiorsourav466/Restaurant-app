@@ -1,12 +1,40 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../context/AppContext";
 import MenuCard from "./MenuCard";
 import { Sparkles } from "lucide-react";
 
-
 const Menus = () => {
-   const { menus, navigate } = useContext(AppContext);
+  const menuSectionRef = useRef(null);
 
+  const {
+    menus,
+    navigate,
+    totalMenus,
+    fetchMenus,
+    menuPage,
+    menuTotalPages,
+    setMenuPage,
+  } = useContext(AppContext);
+
+  useEffect(() => {
+    fetchMenus(menuPage);
+  }, [menuPage]);
+
+  const changePage = (page) => {
+    setMenuPage(page);
+
+    setTimeout(() => {
+      const y =
+        menuSectionRef.current.getBoundingClientRect().top +
+        window.pageYOffset -
+        100; // Adjust according to navbar height
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }, 100);
+  };
   return (
     <section className="relative py-28 bg-[#fffaf5] overflow-hidden">
       {/* Background Decorations */}
@@ -80,7 +108,10 @@ const Menus = () => {
         </div>
 
         {/* Menu Section Heading */}
-        <div className="flex items-center justify-between mb-12 flex-wrap gap-5">
+        <div
+          ref={menuSectionRef}
+          className="flex items-center justify-between mb-12 flex-wrap gap-5"
+        >
           <div>
             <p className="text-orange-500 uppercase tracking-[4px] mb-3 font-semibold">
               Signature Dishes
@@ -96,7 +127,7 @@ const Menus = () => {
             <p className="text-gray-500 text-sm">Total Available Items</p>
 
             <h3 className="text-3xl font-extrabold text-orange-500">
-              {menus.length}
+              {totalMenus}
             </h3>
           </div>
         </div>
@@ -106,6 +137,27 @@ const Menus = () => {
           {menus.map((menu) => (
             <MenuCard key={menu._id} menu={menu} />
           ))}
+        </div>
+        <div className="flex justify-center items-center gap-4 mt-16">
+          <button
+            disabled={menuPage === 1}
+            onClick={() => changePage(menuPage - 1)}
+            className="px-5 py-2 rounded-lg bg-orange-500 text-white disabled:opacity-50"
+          >
+            Previous
+          </button>
+
+          <span className="font-semibold">
+            Page {menuPage} of {menuTotalPages}
+          </span>
+
+          <button
+            disabled={menuPage === menuTotalPages}
+            onClick={() => changePage(menuPage + 1)}
+            className="px-5 py-2 rounded-lg bg-orange-500 text-white disabled:opacity-50"
+          >
+            Next
+          </button>
         </div>
       </div>
     </section>

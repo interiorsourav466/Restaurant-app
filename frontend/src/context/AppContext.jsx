@@ -33,6 +33,7 @@ const AppContextProvider = ({ children }) => {
   const [menuTotalPages, setMenuTotalPages] = useState(1);
   const [categoryPage, setCategoryPage] = useState(1);
   const [categoryTotalPages, setCategoryTotalPages] = useState(1);
+  const [totalMenus, setTotalMenus] = useState(0);
 
   const fetchCategories = async (page = 1) => {
     try {
@@ -148,6 +149,7 @@ const AppContextProvider = ({ children }) => {
         setMenus(data.menuItems);
         setMenuPage(data.currentPage);
         setMenuTotalPages(data.totalPages);
+        setTotalMenus(data.totalMenus);
       }
     } catch (error) {
       console.log(error);
@@ -208,6 +210,7 @@ const AppContextProvider = ({ children }) => {
     menuPage,
     setMenuPage,
     menuTotalPages,
+    totalMenus,
 
     addToCart,
     removeFromCart,

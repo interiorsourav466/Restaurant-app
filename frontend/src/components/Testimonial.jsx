@@ -4,21 +4,24 @@ const testimonials = [
   {
     name: "Rahul Sharma",
     role: "Software Engineer",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80",
     review:
       "Amazing food and premium ambience. Flavoro feels like a luxury dining experience.",
   },
   {
     name: "Priya Das",
     role: "Student",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80",
     review:
       "Affordable pricing with outstanding taste. Their biryani is absolutely incredible.",
   },
   {
     name: "Amit Verma",
     role: "Business Owner",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&q=80",
     review:
       "One of the best restaurants in Kolkata. Great service and fast delivery.",
   },
@@ -35,7 +38,7 @@ export default function Testimonial() {
           </p>
 
           <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-            What Our 
+            What Our
             <span className="text-orange-500"> Customers Say</span>
           </h2>
         </div>
