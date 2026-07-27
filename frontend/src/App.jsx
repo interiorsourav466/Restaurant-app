@@ -25,6 +25,7 @@ import Orders from "./pages/admin/Orders";
 import Bookings from "./pages/admin/Bookings";
 import Dashboard from "./pages/admin/Dashboard";
 import Profile from "./pages/Profile";
+import AIChatBot from "./components/AI/AIChatBot";
 const App = () => {
   const adminPath = useLocation().pathname.includes("admin");
   const { admin } = useContext(AppContext);
@@ -70,6 +71,8 @@ const App = () => {
         </Route>
       </Routes>
       {!adminPath && <Footer />}
+        {/* AI Chatbot */}
+      {!adminPath && <AIChatBot />}
     </div>
   );
 };

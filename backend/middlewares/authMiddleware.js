@@ -7,7 +7,7 @@ export const protect = (req,res,next)=>{
  if(!token){
    return res.status(401).json({
      success:false,
-     message:"Please login to continue"
+     message:"Please login to continue" 
    })
  }
 

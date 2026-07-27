@@ -61,25 +61,6 @@ const Menu = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Hero */}
 
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-5 py-2 rounded-full font-semibold shadow-sm">
-              <Sparkles size={18} />
-              Flavoro Signature Menu
-            </div>
-
-            <h1 className="mt-6 text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
-              Discover
-              <span className="text-orange-500">
-                {" "}
-                Authentic Indian Flavours
-              </span>
-            </h1>
-
-            <p className="mt-5 max-w-2xl mx-auto text-gray-600 text-base md:text-lg leading-8">
-              From spicy street food to rich royal curries, enjoy handcrafted
-              dishes made with authentic spices and fresh ingredients.
-            </p>
-          </div>
 
           {/* Search Box */}
           <div className="max-w-3xl mx-auto mb-8">

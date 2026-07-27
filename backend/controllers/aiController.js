@@ -5,10 +5,10 @@ export const chatWithAI = async (req, res) => {
   try {
     const { message } = req.body;
 
-    if (!message) {
+    if (!message || typeof message !== "string" || !message.trim()) {
       return res.status(400).json({
         success: false,
-        message: "Message is required",
+        message: "A valid non-empty message is required.",
       });
     }
 
@@ -25,14 +25,11 @@ export const chatWithAI = async (req, res) => {
       reply,
     });
   } catch (error) {
-    console.error(error);
-
-    console.error("AI Controller Error:", error);
+    console.error("AI Controller Error:", error.message);
 
     return res.status(500).json({
       success: false,
-      message: error.message,
-      error: error,
+      message: error.message || "Failed to process chat request.",
     });
   }
 };

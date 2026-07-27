@@ -1,40 +1,49 @@
-import { GoogleGenAI } from "@google/genai";
+import Groq from "groq-sdk";
 import systemPrompt from "../utils/systemPrompt.js";
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-});
-
 export const askAI = async (userMessage, menuItems = []) => {
-  const menuText = menuItems
-    .map(
-      (item) => `
+  if (!process.env.GROQ_API_KEY) {
+    throw new Error("GROQ_API_KEY is missing from environment variables.");
+  }
+
+  const groq = new Groq({
+    apiKey: process.env.GROQ_API_KEY,
+  });
+
+  const menuText =
+    menuItems.length > 0
+      ? menuItems
+          .map(
+            (item) => `
 Name: ${item.name}
-Description: ${item.description}
+Description: ${item.description || "N/A"}
 Price: ₹${item.price}
 Category: ${item.category?.name || "N/A"}
 Available: ${item.isAvailable ? "Yes" : "No"}
 Special: ${item.isSpecial ? "Yes" : "No"}
-Rating: ${item.rating}
+Rating: ${item.rating ?? "N/A"}
 `
-    )
-    .join("\n----------------------\n");
+          )
+          .join("\n-----------------\n")
+      : "No active menu items available currently.";
 
-  const prompt = `
-${systemPrompt}
+  const fullPrompt = `${systemPrompt}
 
 Restaurant Menu:
+${menuText}`;
 
-${menuText}
+  try {
+    const chatCompletion = await groq.chat.completions.create({
+      messages: [
+        { role: "system", content: fullPrompt },
+        { role: "user", content: userMessage },
+      ],
+      model: "llama-3.3-70b-versatile",
+    });
 
-User:
-${userMessage}
-`;
-
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: prompt,
-  });
-
-  return response.text;
+    return chatCompletion.choices[0]?.message?.content || "No response generated.";
+  } catch (err) {
+    console.error("Groq AI Error:", err.message);
+    throw new Error(err.message || "Failed to process request with AI.");
+  }
 };
