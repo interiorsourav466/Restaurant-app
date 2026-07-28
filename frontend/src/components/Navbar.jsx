@@ -78,6 +78,18 @@ const Navbar = () => {
             >
               Menus
             </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  isActive
+                    ? "bg-orange-100 text-orange-600"
+                    : "text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                }`
+              }
+            >
+              About
+            </NavLink>
 
             <NavLink
               to="/book-table"
@@ -211,8 +223,26 @@ const Navbar = () => {
               to={"/menu"}
               className="block text-gray-700 hover:text-orange-500"
             >
+              <Link
+                to="/about"
+                className="block text-gray-700 hover:text-orange-500"
+              >
+                About
+              </Link>
               Menus
             </Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  isActive
+                    ? "bg-orange-100 text-orange-600"
+                    : "text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                }`
+              }
+            >
+              About
+            </NavLink>
 
             <Link
               to={"/book-table"}

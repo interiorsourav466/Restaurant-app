@@ -8,15 +8,7 @@
     "rating": 4.9,
     "isAvailable": true
   },
-  {
-    "name": "Veg Dum Biryani",
-    "description": "Basmati rice cooked with assorted vegetables and aromatic spices",
-    "price": 180,
-    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80",
-    "category": "Biryani",
-    "rating": 4.4,
-    "isAvailable": true
-  },
+ 
   {
     "name": "Egg Biryani",
     "description": "Spiced basmati rice layered with boiled eggs and herbs",
@@ -26,15 +18,7 @@
     "rating": 4.5,
     "isAvailable": true
   },
-  {
-    "name": "Paneer Biryani",
-    "description": "Rich and creamy paneer cubes layered with saffron rice",
-    "price": 210,
-    "image": "https://images.unsplash.com/photo-1642821356980-36647b5d39ec?auto=format&fit=crop&w=800&q=80",
-    "category": "Biryani",
-    "rating": 4.5,
-    "isAvailable": true
-  },
+
   {
     "name": "Prawns Biryani",
     "description": "Fresh prawns cooked in a spicy yogurt marination and layered with rice",
@@ -62,15 +46,7 @@
     "rating": 4.9,
     "isAvailable": true
   },
-  {
-    "name": "Hyderabadi Chicken Dum Biryani",
-    "description": "Authentic spicy Hyderabadi style slow-cooked chicken biryani",
-    "price": 240,
-    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80",
-    "category": "Biryani",
-    "rating": 4.8,
-    "isAvailable": true
-  },
+
   {
     "name": "Fish Biryani",
     "description": "Tender fish fillets cooked with aromatic basmati rice and spices",
@@ -89,15 +65,7 @@
     "rating": 4.7,
     "isAvailable": true
   },
-  {
-    "name": "Sindhi Mutton Biryani",
-    "description": "Super spicy layered basmati rice cooked with tender goat meat, plums, and baby potatoes",
-    "price": 370,
-    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80",
-    "category": "Biryani",
-    "rating": 4.8,
-    "isAvailable": true
-  },
+ 
   {
     "name": "Ambur Chicken Biryani",
     "description": "Traditional South Indian biryani made with Seeraga samba rice and a rich garlic-chili paste",
@@ -116,15 +84,7 @@
     "rating": 4.3,
     "isAvailable": true
   },
-  {
-    "name": "Soya Chaap Dum Biryani",
-    "description": "Marinated tandoori soya chaap chunks layered deeply with aromatic long-grain dum rice",
-    "price": 195,
-    "image": "https://images.unsplash.com/photo-1642821356980-36647b5d39ec?auto=format&fit=crop&w=800&q=80",
-    "category": "Biryani",
-    "rating": 4.4,
-    "isAvailable": true
-  },
+ 
   {
     "name": "Lucknowi Mutton Biryani",
     "description": "Awadhi style delicate, clean, and highly fragrant white-layered meat biryani with a trace of rosewater",
@@ -142,15 +102,6 @@
     "category": "Biryani",
     "rating": 4.5,
     "isAvailable": false
-  },
-  {
-    "name": "Kolkata Egg Flat Mughlai Street Paratha Wrap",
-    "description": "Deep fried crisp thin flour bread square folded internally with heavy layers of egg wash, raw minced onions, and chillies",
-    "price": 135,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Kolkata Street Food",
-    "rating": 4.6,
-    "isAvailable": true
   },
   {
     "name": "Kolkata Mughlai Mutton Kathi Roll Wrap",
@@ -179,15 +130,7 @@
     "rating": 4.6,
     "isAvailable": true
   },
-  {
-    "name": "Kolkata Egg Mughlai Paratha",
-    "description": "Deep-fried crisp square flatbread layered inside with whisked eggs, green chillies, and minced raw onions",
-    "price": 130,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Kolkata Street Food",
-    "rating": 4.6,
-    "isAvailable": true
-  },
+ 
   {
     "name": "Kolkata Chicken Roll Classic",
     "description": "Paratha layered with egg, wrapped around juicy pan-seared chicken cubes, raw onions, and tangy sauces",
@@ -386,15 +329,7 @@
     "rating": 4.8,
     "isAvailable": true
   },
-  {
-    "name": "Kadhai Paneer",
-    "description": "Paneer cooked with bell peppers and freshly ground spices in a wok",
-    "price": 210,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "North Indian Curries",
-    "rating": 4.7,
-    "isAvailable": true
-  },
+  
   {
     "name": "Chicken Tikka Masala",
     "description": "Roasted chicken tikka pieces served in a spicy and creamy onion-tomato gravy",
@@ -485,15 +420,7 @@
     "rating": 4.8,
     "isAvailable": true
   },
-  {
-    "name": "Mushroom Masala",
-    "description": "Button mushrooms cooked in a spicy onion, tomato, and cashew gravy",
-    "price": 190,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "North Indian Curries",
-    "rating": 4.5,
-    "isAvailable": true
-  },
+ 
   {
     "name": "Aloo Gobhi",
     "description": "Classic dry dish made with potatoes, cauliflower, and mild spices",
@@ -566,33 +493,8 @@
     "rating": 4.9,
     "isAvailable": true
   },
-  {
-    "name": "Plain Naan",
-    "description": "Traditional flatbread made from refined flour, baked in a clay oven",
-    "price": 40,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "Butter Naan",
-    "description": "Soft tandoor-baked flatbread generously brushed with butter",
-    "price": 50,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Garlic Naan",
-    "description": "Leavened flatbread garnished with minced garlic and butter",
-    "price": 65,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.8,
-    "isAvailable": true
-  },
+  
+
   {
     "name": "Tandoori Roti",
     "description": "Whole wheat flour bread baked in a clay tandoor",
@@ -611,33 +513,8 @@
     "rating": 4.5,
     "isAvailable": true
   },
-  {
-    "name": "Lachha Paratha",
-    "description": "Multi-layered, flaky whole wheat flatbread baked in tandoor",
-    "price": 55,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Stuffed Kulcha",
-    "description": "Soft flatbread stuffed with spiced potatoes and onions",
-    "price": 70,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.4,
-    "isAvailable": true
-  },
-  {
-    "name": "Cheese Naan",
-    "description": "Naan bread stuffed with melted cheese, baked to perfection",
-    "price": 90,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.7,
-    "isAvailable": true
-  },
+  
+ 
   {
     "name": "Missi Roti",
     "description": "Savory gram flour flatbread seasoned with spices and herbs",
@@ -647,42 +524,9 @@
     "rating": 4.4,
     "isAvailable": true
   },
-  {
-    "name": "Rumali Roti",
-    "description": "Extremely thin, soft, and handkerchief-like flatbread cooked on an inverted wok",
-    "price": 35,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Kolkata Khasta Luchi (4 Pcs)",
-    "description": "Puffed deep-fried refined flour golden flatbreads, perfect for pairing with potato or mutton curries",
-    "price": 60,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Whole Wheat Layered Ring Pudina Lachha Paratha",
-    "description": "Flaky griddle toasted flatbread composed of multi layered wheat rings infused heavily with dry mint leaf spice powder",
-    "price": 60,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.5,
-    "isAvailable": true
-  },
-  {
-    "name": "Malabar Parotta Layered Bread Plate (2 Pcs)",
-    "description": "Two flaky, multi-layered spiral whole wheat flatbreads prepared over flat iron tawa, brushed with clear oil skin",
-    "price": 65,
-    "image": "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=800&q=80",
-    "category": "Indian Flatbreads",
-    "rating": 4.6,
-    "isAvailable": true
-  },
+ 
+ 
+
   {
     "name": "Veg Fried Rice",
     "description": "Wok-fried rice tossed with chopped vegetables and light soy sauce",
@@ -971,24 +815,7 @@
     "rating": 4.8,
     "isAvailable": true
   },
-  {
-    "name": "Chicken Seekh Kebab",
-    "description": "Minced chicken seasoned with fresh herbs and grilled on skewers",
-    "price": 230,
-    "image": "https://images.unsplash.com/photo-1628102476695-814a35747607?auto=format&fit=crop&w=800&q=80",
-    "category": "Quick Snacks & Appetizers",
-    "rating": 4.6,
-    "isAvailable": true
-  },
-  {
-    "name": "Mutton Seekh Kebab",
-    "description": "Succulent minced mutton skewers roasted in charcoal tandoor",
-    "price": 310,
-    "image": "https://images.unsplash.com/photo-1628102476695-814a35747607?auto=format&fit=crop&w=800&q=80",
-    "category": "Quick Snacks & Appetizers",
-    "rating": 4.8,
-    "isAvailable": true
-  },
+
   {
     "name": "Chicken Lollipop",
     "description": "Deep-fried chicken wings coated in a spicy red batter",
@@ -1043,33 +870,8 @@
     "rating": 4.4,
     "isAvailable": true
   },
-  {
-    "name": "Gulab Jamun (2 Pcs)",
-    "description": "Deep-fried milk solids dumplings soaked in warm sugar syrup",
-    "price": 60,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39?auto=format&fit=crop&w=800&q=80",
-    "category": "Sweet Treats & Desserts",
-    "rating": 4.7,
-    "isAvailable": true
-  },
-  {
-    "name": "Rasmalai (2 Pcs)",
-    "description": "Soft cottage cheese flattened balls soaked in sweetened, thickened saffron milk",
-    "price": 80,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39?auto=format&fit=crop&w=800&q=80",
-    "category": "Sweet Treats & Desserts",
-    "rating": 4.8,
-    "isAvailable": true
-  },
-  {
-    "name": "Moong Dal Halwa",
-    "description": "Rich and delicious golden halwa made from mung lentils, ghee, and nuts",
-    "price": 90,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39?auto=format&fit=crop&w=800&q=80",
-    "category": "Sweet Treats & Desserts",
-    "rating": 4.7,
-    "isAvailable": true
-  },
+
+
   {
     "name": "Brownie with Ice Cream",
     "description": "Warm chocolate fudge brownie topped with a scoop of vanilla ice cream",
@@ -1079,15 +881,7 @@
     "rating": 4.7,
     "isAvailable": true
   },
-  {
-    "name": "Gajar Ka Halwa",
-    "description": "Seasonal fresh grated carrot pudding cooked with milk, khoya, and dry fruits",
-    "price": 90,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39?auto=format&fit=crop&w=800&q=80",
-    "category": "Sweet Treats & Desserts",
-    "rating": 4.8,
-    "isAvailable": false
-  },
+ 
   {
     "name": "Choco Lava Cake",
     "description": "Decadent chocolate cake with a molten chocolate core",
@@ -1097,24 +891,7 @@
     "rating": 4.7,
     "isAvailable": true
   },
-  {
-    "name": "Mishti Doi Red Earthen Claypot",
-    "description": "Traditional thick sweet Bengali baked yogurt fermented completely inside porous red clay pots with brown sugar",
-    "price": 65,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39?auto=format&fit=crop&w=800&q=80",
-    "category": "Sweet Treats & Desserts",
-    "rating": 4.9,
-    "isAvailable": true
-  },
-  {
-    "name": "Baked Rosogolla Cream Plate (2 Pcs)",
-    "description": "Spongy cottage cheese sweet balls dipped inside dense cardamoms rabri milk cream and oven-baked golden top",
-    "price": 90,
-    "image": "https://images.unsplash.com/photo-1589119908995-c6800faecf39?auto=format&fit=crop&w=800&q=80",
-    "category": "Sweet Treats & Desserts",
-    "rating": 4.8,
-    "isAvailable": true
-  },
+  
   {
     "name": "Sweet Lassi",
     "description": "Thick and refreshing traditional churned sweet yogurt drink",

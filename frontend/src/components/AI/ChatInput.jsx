@@ -69,7 +69,7 @@ const ChatInput = ({
       <button
         onClick={sendMessage}
         disabled={loading}
-        className="bg-orange-500 text-white p-3 rounded-lg disabled:opacity-50"
+        className="bg-orange-500 text-white p-3 rounded-lg disabled:opacity-50 cursor-pointer"
       >
         <Send size={18} />
       </button>

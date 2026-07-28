@@ -1,17 +1,19 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { ShoppingCart, Star, Plus, Minus } from "lucide-react";
+import { ShoppingCart, Star, Plus, Minus, Eye } from "lucide-react";
 
 const MenuCard = ({ menu }) => {
-  const { navigate, addToCart, cart, removeFromCart } = useContext(AppContext);
+  const { navigate, addToCart, removeFromCart, cart } = useContext(AppContext);
 
   const cartItem = cart?.items?.find((item) => item.menuItem?._id === menu._id);
 
   return (
-    <div className="bg-white rounded-[30px] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group border border-orange-100 flex flex-col h-full">
+    <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-orange-100 flex flex-col h-[460px] group hover:-translate-y-2">
+      {/* IMAGE */}
+
       <div
         onClick={() => navigate(`/menu-details/${menu._id}`)}
-        className="relative h-64 overflow-hidden cursor-pointer"
+        className="relative h-52 overflow-hidden cursor-pointer"
       >
         <img
           src={menu.image}
@@ -19,57 +21,91 @@ const MenuCard = ({ menu }) => {
           className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 
-        <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full flex items-center gap-1">
-          <Star size={16} className="text-orange-500 fill-orange-500" />
+        {/* Rating */}
 
-          <span>{menu.rating}</span>
+        <div className="absolute top-4 left-4 bg-white rounded-full px-3 py-1 flex items-center gap-1 shadow-lg">
+          <Star size={15} className="fill-orange-500 text-orange-500" />
+
+          <span className="text-sm font-semibold">{menu.rating}</span>
         </div>
+
+        {/* Special */}
+
+        {menu.isSpecial && (
+          <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+            SPECIAL
+          </div>
+        )}
       </div>
 
-      <div className="p-6 flex flex-col flex-1">
-        <p className="text-orange-500 text-sm font-semibold uppercase mb-2">
+      {/* BODY */}
+
+      <div className="flex flex-col flex-1 p-5">
+        <p className="text-orange-500 uppercase tracking-widest text-xs font-bold">
           {menu.category?.name}
         </p>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-2 min-h-[65px]">
+        <h2 className="text-2xl font-bold text-gray-900 mt-2 line-clamp-2 min-h-[64px]">
           {menu.name}
-        </h3>
+        </h2>
 
-       <p className="text-gray-600 text-sm line-clamp-2 min-h-[45px]">{menu.description}</p>
+        {/* PRICE */}
 
-     <div className="flex items-center justify-between mt-auto pt-6">
+        <div className="flex items-center justify-between mt-4">
           <div>
-            <p className="text-gray-500 text-sm">Starting From</p>
+            <p className="text-xs text-gray-400 uppercase">Price</p>
 
-            <h2 className="text-3xl font-extrabold text-orange-500">
+            <h3 className="text-3xl font-extrabold text-orange-500">
               ₹{menu.price}
-            </h2>
+            </h3>
           </div>
 
+          <div className="text-right">
+            <p className="text-xs text-gray-400 uppercase">Rating</p>
+
+            <div className="flex items-center gap-1 justify-end">
+              <Star size={16} className="fill-orange-500 text-orange-500" />
+
+              <span className="font-semibold">{menu.rating}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* BUTTONS */}
+
+        <div className="mt-auto pt-6 flex gap-3">
+          <button
+            onClick={() => navigate(`/menu-details/${menu._id}`)}
+            className="flex-1 h-11 rounded-xl border-2 border-orange-500 text-orange-500 hover:bg-orange-50 transition cursor-pointer flex justify-center items-center gap-2"
+          >
+            <Eye size={18} />
+            View
+          </button>
+
           {cartItem ? (
-            <div className="flex items-center gap-3 bg-orange-500 text-white px-4 py-3 rounded-full">
+            <div className="flex-1 h-11 rounded-xl bg-orange-500 text-white flex items-center justify-between px-4">
               <button
                 onClick={() => removeFromCart(menu._id)}
                 className="cursor-pointer hover:scale-125 transition"
               >
-                <Minus size={16} />
+                <Minus size={18} />
               </button>
 
-              <span className="font-bold">{cartItem.quantity}</span>
+              <span className="font-bold text-lg">{cartItem.quantity}</span>
 
               <button
                 onClick={() => addToCart(menu._id)}
                 className="cursor-pointer hover:scale-125 transition"
               >
-                <Plus size={16} />
+                <Plus size={18} />
               </button>
             </div>
           ) : (
             <button
               onClick={() => addToCart(menu._id)}
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-orange-500 text-white shadow-lg cursor-pointer"
+              className="flex-1 h-11 rounded-xl bg-orange-500 hover:bg-orange-600 text-white transition cursor-pointer flex justify-center items-center gap-2"
             >
               <ShoppingCart size={18} />
               Add

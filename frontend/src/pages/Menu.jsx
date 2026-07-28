@@ -21,7 +21,7 @@ const Menu = () => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/menu/all?search=${searchQuery}&category=${category}&special=${special}&page=${page}&limit=12`
+        `/api/menu/all?search=${searchQuery}&category=${category}&special=${special}&page=${page}&limit=12`,
       );
 
       if (data.success) {
@@ -50,21 +50,20 @@ const Menu = () => {
   };
 
   return (
-    <section className="min-h-screen bg-[#fffaf5] overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-b from-[#fffaf5] via-white to-[#fff7ef] pb-20">
       {/* Hero Section */}
-      <div className="relative overflow-hidden pt-16 pb-10 px-6">
+      <div className="relative overflow-hidden pt-12 pb-8 px-6">
         {/* Background Blurs */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-orange-200/40 rounded-full blur-3xl"></div>
 
         <div className="absolute right-0 bottom-0 w-96 h-96 bg-orange-100 rounded-full blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 mt-[-40px]">
           {/* Hero */}
 
-
           {/* Search Box */}
-          <div className="max-w-3xl mx-auto mb-8">
-            <div className="relative bg-white rounded-2xl border border-orange-100 shadow-lg">
+          <div className="max-w-2xl mx-auto mb-10">
+            <div className="relative bg-white rounded-2xl shadow-xl border border-orange-100 overflow-hidden">
               <Search
                 className="absolute left-5 top-1/2 -translate-y-1/2 text-orange-500"
                 size={22}
@@ -72,10 +71,10 @@ const Menu = () => {
 
               <input
                 type="text"
-                placeholder="Search your favourite food..."
+                placeholder="Search your favourite dishes..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full py-4 pl-14 pr-14 rounded-2xl outline-none text-lg"
+                className="w-full h-16 pl-14 pr-14 text-lg outline-none"
               />
 
               {searchQuery && (
@@ -83,14 +82,14 @@ const Menu = () => {
                   onClick={handleClearSearch}
                   className="absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer"
                 >
-                  <X className="text-gray-500 hover:text-orange-500" />
+                  <X className="text-gray-400 hover:text-orange-500" />
                 </button>
               )}
             </div>
           </div>
 
           {/* Results */}
-          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-4 mt-[-100px]">
             {/* Left */}
             <div>
               {searchQuery ? (
